@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title id="pg-title">Organic Food</title>
+<title id="pg-title">Clinton Tech Order Suit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:wght@400;600;700;900&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=Bebas+Neue&family=Urbanist:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&family=Raleway:wght@300;400;600;700;800&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -302,6 +302,392 @@ nav{position:sticky;top:0;z-index:200;background:#FFFFFFF2;backdrop-filter:blur(
   .atab{padding:9px 11px;font-size:12px}.det-body{padding:17px}
   .spanel,.fpanel{padding:14px}.presets-grid{grid-template-columns:1fr 1fr}
 }
+
+/* ══════════════════════════════════════════════════════════
+   THEME SYSTEM — 20 full UI personalities
+   Each .theme-* class overrides layout, typography, shapes,
+   hero style, card style, nav style, and more
+   ══════════════════════════════════════════════════════════ */
+
+/* ── DEFAULT (no class) stays as-is ── */
+
+/* ════════════ 1. CLASSIC — Warm serif luxury ════════════ */
+.theme-classic body{font-family:'Raleway',sans-serif}
+.theme-classic .orb{font-family:'Playfair Display',serif;letter-spacing:1px}
+.theme-classic nav{border-bottom:2px solid var(--t2)}
+.theme-classic .nav-mark{border-radius:4px}
+.theme-classic .nb{border-radius:4px}
+.theme-classic .hero{border-radius:6px;border-width:2px}
+.theme-classic .hero h1{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(28px,5vw,52px)}
+.theme-classic .hero-eyebrow{font-family:'Raleway',sans-serif;letter-spacing:8px}
+.theme-classic .pcard{border-radius:4px;border-width:2px}
+.theme-classic .btn{border-radius:4px}
+.theme-classic .btn-ac{border-radius:4px}
+.theme-classic .foot{border-radius:4px;border-width:2px}
+.theme-classic .foot-name{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;letter-spacing:1px}
+.theme-classic .tag{border-radius:3px}
+.theme-classic .cat{border-radius:4px}
+.theme-classic .p-price{font-family:'Playfair Display',serif}
+.theme-classic .cart-ttl{font-family:'Playfair Display',serif}
+.theme-classic .sum-tot{font-family:'Playfair Display',serif}
+.theme-classic .det-name{font-family:'Playfair Display',serif;font-style:italic}
+.theme-classic .det-price{font-family:'Playfair Display',serif}
+.theme-classic .adm-ttl{font-family:'Playfair Display',serif}
+
+/* ════════════ 2. FOREST — Organic rounded ════════════ */
+.theme-forest body{font-family:'Urbanist',sans-serif}
+.theme-forest .orb{font-family:'Urbanist',sans-serif;font-weight:800;letter-spacing:2px}
+.theme-forest nav{border-bottom:none;box-shadow:0 2px 16px #00000012}
+.theme-forest .nav-mark{border-radius:50%}
+.theme-forest .hero{border-radius:24px;border-style:dashed}
+.theme-forest .hero h1{font-family:'Urbanist',sans-serif;font-weight:800}
+.theme-forest .pcard{border-radius:20px}
+.theme-forest .pcard-media{height:170px;border-radius:16px 16px 0 0}
+.theme-forest .btn{border-radius:100px}
+.theme-forest .btn-ac{border-radius:100px}
+.theme-forest .nb{border-radius:100px}
+.theme-forest .cat{border-radius:100px}
+.theme-forest .tag{border-radius:100px}
+.theme-forest .foot{border-radius:24px}
+.theme-forest .p-price{font-family:'Urbanist',sans-serif;font-weight:800}
+.theme-forest .cart-ttl{font-family:'Urbanist',sans-serif}
+.theme-forest .sum-tot{font-family:'Urbanist',sans-serif}
+.theme-forest .det-price{font-family:'Urbanist',sans-serif;font-weight:800}
+
+/* ════════════ 3. OCEAN — Clean Scandinavian ════════════ */
+.theme-ocean body{font-family:'DM Sans',sans-serif}
+.theme-ocean .orb{font-family:'DM Sans',sans-serif;font-weight:700;letter-spacing:3px}
+.theme-ocean nav{backdrop-filter:blur(30px);border-bottom:1px solid var(--border)}
+.theme-ocean .nav-mark{border-radius:10px}
+.theme-ocean .hero{border-radius:20px;border:none;background:linear-gradient(135deg,var(--ts),var(--bg))}
+.theme-ocean .hero h1{font-weight:300;letter-spacing:-1px;font-size:clamp(30px,6vw,58px)}
+.theme-ocean .pcard{border-radius:16px;border:none;box-shadow:0 2px 20px #00000010}
+.theme-ocean .pcard:hover{box-shadow:0 8px 40px #00000018;transform:translateY(-6px)}
+.theme-ocean .pcard-media{height:180px}
+.theme-ocean .btn{border-radius:12px}
+.theme-ocean .btn-ac{border-radius:12px}
+.theme-ocean .nb{border-radius:10px}
+.theme-ocean .cat{border-radius:10px;border:none;box-shadow:0 1px 6px #00000010}
+.theme-ocean .foot{border:none;box-shadow:0 -2px 20px #00000008}
+
+/* ════════════ 4. ROSE — Fashion editorial ════════════ */
+.theme-rose body{font-family:'Josefin Sans',sans-serif}
+.theme-rose .orb{font-family:'Josefin Sans',sans-serif;font-weight:700;letter-spacing:4px}
+.theme-rose nav{background:#FFFFFFEE;border-bottom:1px solid var(--t2)}
+.theme-rose .nav-mark{border-radius:2px}
+.theme-rose .hero{border-radius:2px;border-width:1px;padding:80px 20px 60px}
+.theme-rose .hero h1{font-family:'Josefin Sans',sans-serif;font-weight:300;letter-spacing:6px;text-transform:uppercase;font-size:clamp(22px,4vw,44px)}
+.theme-rose .hero-eyebrow{letter-spacing:12px;font-size:9px}
+.theme-rose .pcard{border-radius:2px;border-width:1px}
+.theme-rose .pcard-media{height:200px}
+.theme-rose .btn{border-radius:2px;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+.theme-rose .btn-ac{border-radius:2px;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+.theme-rose .nb{border-radius:2px;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+.theme-rose .cat{border-radius:2px;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+.theme-rose .tag{border-radius:2px;letter-spacing:1px;text-transform:uppercase}
+.theme-rose .foot{border-radius:2px}
+.theme-rose .p-price{font-family:'Josefin Sans',sans-serif;letter-spacing:2px}
+.theme-rose .det-price{font-family:'Josefin Sans',sans-serif;letter-spacing:2px}
+
+/* ════════════ 5. SUNSET — Bold editorial ════════════ */
+.theme-sunset body{font-family:'Syne',sans-serif}
+.theme-sunset .orb{font-family:'Bebas Neue',sans-serif;letter-spacing:3px;font-size:1.1em}
+.theme-sunset nav{border-bottom:3px solid var(--t)}
+.theme-sunset .nav-mark{border-radius:0}
+.theme-sunset .nav-name{font-family:'Bebas Neue',sans-serif;letter-spacing:4px;font-size:16px}
+.theme-sunset .hero{border-radius:0;border-left:6px solid var(--t);border-top:none;border-right:none;border-bottom:none;padding:60px 30px 50px}
+.theme-sunset .hero h1{font-family:'Bebas Neue',sans-serif;letter-spacing:4px;font-size:clamp(36px,8vw,72px);line-height:1}
+.theme-sunset .hero-eyebrow{font-family:'Bebas Neue',sans-serif;letter-spacing:6px;font-size:12px}
+.theme-sunset .pcard{border-radius:0;border-left:3px solid var(--t2)}
+.theme-sunset .pcard:hover{border-left-color:var(--t)}
+.theme-sunset .btn{border-radius:0}
+.theme-sunset .btn-ac{border-radius:0}
+.theme-sunset .nb{border-radius:0}
+.theme-sunset .cat{border-radius:0;font-family:'Syne',sans-serif;font-weight:700}
+.theme-sunset .foot{border-radius:0;border-top:3px solid var(--t);border-bottom:none;border-left:none;border-right:none}
+.theme-sunset .p-price{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
+.theme-sunset .det-price{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:3px}
+.theme-sunset .cart-ttl{font-family:'Bebas Neue',sans-serif;letter-spacing:3px}
+
+/* ════════════ 6. ROYAL — Dark luxury ════════════ */
+.theme-royal body{font-family:'Raleway',sans-serif}
+.theme-royal .orb{font-family:'Playfair Display',serif;letter-spacing:2px}
+.theme-royal nav{border-bottom:1px solid var(--t2)}
+.theme-royal .nav-mark{border-radius:6px;border:1px solid var(--t2)}
+.theme-royal .hero{border-radius:8px;background:linear-gradient(145deg,var(--ts) 0%,var(--bg) 60%);border-width:1px}
+.theme-royal .hero h1{font-family:'Playfair Display',serif;font-weight:900;font-style:italic}
+.theme-royal .hero-eyebrow{font-family:'Raleway',sans-serif;letter-spacing:8px}
+.theme-royal .pcard{border-radius:8px}
+.theme-royal .pcard-media{height:165px}
+.theme-royal .pcard:hover{box-shadow:0 12px 40px var(--t2)}
+.theme-royal .btn{border-radius:6px}
+.theme-royal .btn-ac{border-radius:6px}
+.theme-royal .btn-p{box-shadow:0 4px 14px var(--t2)}
+.theme-royal .foot{border-radius:8px;border-color:var(--t2)}
+.theme-royal .foot-name{font-family:'Playfair Display',serif;font-style:italic}
+.theme-royal .p-price{font-family:'Playfair Display',serif;font-size:18px}
+.theme-royal .det-price{font-family:'Playfair Display',serif}
+.theme-royal .det-name{font-family:'Playfair Display',serif;font-style:italic}
+
+/* ════════════ 7. EMERALD — Friendly & fresh ════════════ */
+.theme-emerald body{font-family:'Urbanist',sans-serif}
+.theme-emerald .orb{font-family:'Urbanist',sans-serif;font-weight:800}
+.theme-emerald nav{border-radius:0 0 16px 16px;margin:0 16px;top:8px;border:1.5px solid var(--border2);box-shadow:0 4px 20px #00000010}
+.theme-emerald .nav-mark{border-radius:12px}
+.theme-emerald .hero{border-radius:28px}
+.theme-emerald .hero h1{font-weight:800}
+.theme-emerald .pcard{border-radius:24px;overflow:hidden}
+.theme-emerald .pcard-media{height:175px}
+.theme-emerald .btn{border-radius:14px;font-weight:700}
+.theme-emerald .btn-ac{border-radius:14px;font-weight:700}
+.theme-emerald .nb{border-radius:12px}
+.theme-emerald .cat{border-radius:14px;font-weight:700}
+.theme-emerald .foot{border-radius:24px}
+.theme-emerald .p-price{font-weight:800}
+.theme-emerald .det-price{font-weight:800}
+
+/* ════════════ 8. SLATE — Corporate minimal ════════════ */
+.theme-slate body{font-family:'DM Sans',sans-serif;font-weight:400}
+.theme-slate .orb{font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:1px}
+.theme-slate nav{border-bottom:1px solid var(--border)}
+.theme-slate .nav-mark{border-radius:6px}
+.theme-slate .hero{border-radius:10px;background:var(--bg2);border:1px solid var(--border)}
+.theme-slate .hero h1{font-weight:600;letter-spacing:-0.5px}
+.theme-slate .pcard{border-radius:10px;border-color:var(--border)}
+.theme-slate .pcard-media{height:150px}
+.theme-slate .pcard:hover{box-shadow:0 4px 16px #00000014;transform:translateY(-2px)}
+.theme-slate .btn{border-radius:8px}
+.theme-slate .btn-ac{border-radius:8px;font-weight:600}
+.theme-slate .nb{border-radius:6px}
+.theme-slate .cat{border-radius:6px;font-weight:600}
+.theme-slate .foot{border-radius:10px}
+.theme-slate .tag{border-radius:5px}
+
+/* ════════════ 9. MARIGOLD — Market & artisan ════════════ */
+.theme-marigold body{font-family:'Syne',sans-serif}
+.theme-marigold .orb{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:2px}
+.theme-marigold nav{border-bottom:2px solid var(--t)}
+.theme-marigold .nav-mark{border-radius:8px;border:2px solid var(--t)}
+.theme-marigold .hero{border-radius:12px;border-width:2px;border-style:solid}
+.theme-marigold .hero h1{font-family:'Syne',sans-serif;font-weight:800}
+.theme-marigold .pcard{border-radius:12px;border-width:2px}
+.theme-marigold .pcard-media{height:160px}
+.theme-marigold .btn{border-radius:10px;font-weight:700}
+.theme-marigold .btn-ac{border-radius:10px;font-weight:700}
+.theme-marigold .nb{border-radius:8px;font-weight:700}
+.theme-marigold .cat{border-radius:8px;border-width:2px;font-weight:700}
+.theme-marigold .foot{border-radius:12px;border-width:2px}
+.theme-marigold .p-price{font-family:'Syne',sans-serif;font-weight:800;font-size:17px}
+.theme-marigold .det-price{font-family:'Syne',sans-serif;font-weight:800}
+
+/* ════════════ 10. BERRY — Bold & modern ════════════ */
+.theme-berry body{font-family:'Urbanist',sans-serif}
+.theme-berry .orb{font-family:'Urbanist',sans-serif;font-weight:800;letter-spacing:3px}
+.theme-berry nav{background:var(--card);border-bottom:none;box-shadow:0 4px 30px #00000018}
+.theme-berry .nav-mark{border-radius:50%;border:2px solid var(--t2)}
+.theme-berry .hero{border-radius:20px;border:none;background:linear-gradient(135deg,var(--t) 0%,var(--ts) 100%)}
+.theme-berry .hero h1{color:#fff;font-weight:800}
+.theme-berry .hero p{color:#ffffffCC}
+.theme-berry .hero-eyebrow{color:#ffffffBB}
+.theme-berry .hero-rule{background:#ffffff88}
+.theme-berry .pcard{border-radius:20px;border:none;box-shadow:0 4px 24px #00000014}
+.theme-berry .pcard:hover{box-shadow:0 12px 40px #00000022;transform:translateY(-6px)}
+.theme-berry .pcard-media{height:180px}
+.theme-berry .btn{border-radius:100px;font-weight:700}
+.theme-berry .btn-ac{border-radius:100px;font-weight:700}
+.theme-berry .nb{border-radius:100px}
+.theme-berry .cat{border-radius:100px;border:none;box-shadow:0 2px 8px #00000012}
+.theme-berry .foot{border-radius:20px;border:none;box-shadow:0 4px 20px #00000010}
+
+/* ════════════ 11. CORAL — Vibrant & lifestyle ════════════ */
+.theme-coral body{font-family:'Syne',sans-serif}
+.theme-coral .orb{font-family:'Syne',sans-serif;font-weight:800}
+.theme-coral nav{border-bottom:none;background:var(--card);box-shadow:0 2px 12px #00000010}
+.theme-coral .nav-mark{border-radius:10px}
+.theme-coral .hero{border-radius:18px;border:none;background:linear-gradient(160deg,var(--ts),var(--bg) 70%)}
+.theme-coral .hero h1{font-weight:800;font-size:clamp(26px,5vw,50px)}
+.theme-coral .pcard{border-radius:18px;border:none;box-shadow:0 3px 18px #00000010}
+.theme-coral .pcard:hover{box-shadow:0 10px 36px #00000018;transform:translateY(-5px)}
+.theme-coral .pcard-media{height:170px}
+.theme-coral .btn{border-radius:12px;font-weight:700}
+.theme-coral .btn-ac{border-radius:12px;font-weight:700}
+.theme-coral .nb{border-radius:10px}
+.theme-coral .cat{border-radius:100px}
+.theme-coral .tag{border-radius:6px}
+.theme-coral .foot{border-radius:18px;border:none;box-shadow:0 -2px 16px #00000008}
+
+/* ════════════ 12. SAGE — Wellness & nature ════════════ */
+.theme-sage body{font-family:'Raleway',sans-serif;font-weight:400}
+.theme-sage .orb{font-family:'Raleway',sans-serif;font-weight:700;letter-spacing:4px}
+.theme-sage nav{border-bottom:1px solid var(--border)}
+.theme-sage .nav-mark{border-radius:50%}
+.theme-sage .hero{border-radius:16px;border-style:dashed;border-width:1.5px}
+.theme-sage .hero h1{font-family:'Raleway',sans-serif;font-weight:300;letter-spacing:2px;font-size:clamp(24px,5vw,48px)}
+.theme-sage .hero-eyebrow{letter-spacing:8px;font-size:9px}
+.theme-sage .pcard{border-radius:16px;border-style:dashed}
+.theme-sage .pcard:hover{border-style:solid;border-color:var(--t)}
+.theme-sage .pcard-media{height:165px}
+.theme-sage .btn{border-radius:100px;font-weight:600}
+.theme-sage .btn-ac{border-radius:100px;font-weight:600}
+.theme-sage .nb{border-radius:100px}
+.theme-sage .cat{border-radius:100px;border-style:dashed}
+.theme-sage .cat.on{border-style:solid}
+.theme-sage .foot{border-radius:16px;border-style:dashed}
+.theme-sage .p-price{font-family:'Raleway',sans-serif;font-weight:700}
+.theme-sage .det-price{font-family:'Raleway',sans-serif;font-weight:700}
+
+/* ════════════ 13. DENIM — Casual everyday ════════════ */
+.theme-denim body{font-family:'Urbanist',sans-serif}
+.theme-denim .orb{font-family:'Urbanist',sans-serif;font-weight:700;letter-spacing:2px}
+.theme-denim nav{border-bottom:3px solid var(--t)}
+.theme-denim .nav-mark{border-radius:8px}
+.theme-denim .hero{border-radius:14px;border-width:2px}
+.theme-denim .hero h1{font-weight:700}
+.theme-denim .pcard{border-radius:12px}
+.theme-denim .pcard-media{height:158px}
+.theme-denim .btn{border-radius:10px;font-weight:700}
+.theme-denim .btn-ac{border-radius:10px;font-weight:700}
+.theme-denim .nb{border-radius:8px;font-weight:600}
+.theme-denim .cat{border-radius:8px;font-weight:600}
+.theme-denim .foot{border-radius:12px}
+
+/* ════════════ 14. COPPER — Artisan & craft ════════════ */
+.theme-copper body{font-family:'Josefin Sans',sans-serif}
+.theme-copper .orb{font-family:'Josefin Sans',sans-serif;font-weight:700;letter-spacing:4px}
+.theme-copper nav{border-bottom:2px solid var(--t2)}
+.theme-copper .nav-mark{border-radius:2px;border:2px solid var(--t2)}
+.theme-copper .hero{border-radius:4px;border-width:2px}
+.theme-copper .hero h1{font-family:'Josefin Sans',sans-serif;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+.theme-copper .hero-eyebrow{letter-spacing:10px;font-size:9px}
+.theme-copper .pcard{border-radius:4px;border-width:2px}
+.theme-copper .pcard-media{height:160px}
+.theme-copper .btn{border-radius:4px;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+.theme-copper .btn-ac{border-radius:4px;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+.theme-copper .nb{border-radius:2px;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+.theme-copper .cat{border-radius:2px;border-width:2px;letter-spacing:1px;text-transform:uppercase;font-size:11px}
+.theme-copper .foot{border-radius:4px;border-width:2px}
+.theme-copper .p-price{font-family:'Josefin Sans',sans-serif;letter-spacing:2px}
+.theme-copper .det-price{font-family:'Josefin Sans',sans-serif;letter-spacing:2px}
+
+/* ════════════ 15. MIDNIGHT — Gold on dark luxury ════════════ */
+.theme-midnight body{font-family:'Raleway',sans-serif}
+.theme-midnight .orb{font-family:'Playfair Display',serif;letter-spacing:2px}
+.theme-midnight nav{border-bottom:1px solid var(--t2);background:var(--card)F2}
+.theme-midnight .nav-mark{border-radius:6px;border:1px solid var(--t2)}
+.theme-midnight .hero{border-radius:12px;background:linear-gradient(145deg,var(--ts),var(--bg));border-color:var(--t2)}
+.theme-midnight .hero h1{font-family:'Playfair Display',serif;font-style:italic;color:var(--text)}
+.theme-midnight .pcard{border-radius:10px}
+.theme-midnight .pcard:hover{box-shadow:0 12px 40px var(--t2),0 0 0 1px var(--t)}
+.theme-midnight .btn{border-radius:8px}
+.theme-midnight .btn-ac{border-radius:8px}
+.theme-midnight .foot{border-radius:10px}
+.theme-midnight .foot-name{font-family:'Playfair Display',serif;font-style:italic}
+.theme-midnight .p-price{font-family:'Playfair Display',serif;font-size:17px}
+.theme-midnight .det-price{font-family:'Playfair Display',serif}
+.theme-midnight .det-name{font-family:'Playfair Display',serif;font-style:italic}
+
+/* ════════════ 16. CARBON — Cyber industrial ════════════ */
+.theme-carbon body{font-family:'IBM Plex Mono',monospace}
+.theme-carbon .orb{font-family:'IBM Plex Mono',monospace;letter-spacing:1px}
+.theme-carbon nav{border-bottom:1px solid var(--t2);background:var(--card)}
+.theme-carbon .nav-mark{border-radius:2px;border:1px solid var(--t)}
+.theme-carbon .nav-name{font-family:'IBM Plex Mono',monospace;letter-spacing:3px;font-size:11px}
+.theme-carbon .hero{border-radius:4px;border-left:3px solid var(--t);background:var(--card);border-top:none;border-right:none;border-bottom:none;padding:50px 24px 40px}
+.theme-carbon .hero h1{font-family:'IBM Plex Mono',monospace;font-size:clamp(18px,4vw,36px);letter-spacing:2px;font-weight:700}
+.theme-carbon .hero-eyebrow{font-family:'IBM Plex Mono',monospace;letter-spacing:4px;font-size:9px}
+.theme-carbon .hero-rule{width:24px;height:2px;border-radius:0}
+.theme-carbon .pcard{border-radius:4px}
+.theme-carbon .pcard-media{height:150px}
+.theme-carbon .btn{border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:12px}
+.theme-carbon .btn-ac{border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:12px}
+.theme-carbon .nb{border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.theme-carbon .cat{border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.theme-carbon .tag{border-radius:2px;font-family:'IBM Plex Mono',monospace}
+.theme-carbon .foot{border-radius:4px;border-left:3px solid var(--t);border-top:none;border-right:none;border-bottom:none;border-radius:0}
+.theme-carbon .p-price{font-family:'IBM Plex Mono',monospace;font-size:14px}
+.theme-carbon .det-price{font-family:'IBM Plex Mono',monospace}
+
+/* ════════════ 17. OBSIDIAN — Ultra dark premium ════════════ */
+.theme-obsidian body{font-family:'Syne',sans-serif}
+.theme-obsidian .orb{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:3px}
+.theme-obsidian nav{border-bottom:none;background:var(--card)CC;backdrop-filter:blur(24px)}
+.theme-obsidian .nav-mark{border-radius:10px;border:1px solid var(--t2)}
+.theme-obsidian .hero{border-radius:20px;border:1px solid var(--t2);background:linear-gradient(135deg,var(--ts),var(--bg))}
+.theme-obsidian .hero h1{font-weight:800;letter-spacing:-0.5px;font-size:clamp(26px,5vw,50px)}
+.theme-obsidian .pcard{border-radius:16px;border-color:var(--t2)}
+.theme-obsidian .pcard:hover{box-shadow:0 0 0 1px var(--t),0 12px 40px var(--t2)}
+.theme-obsidian .pcard-media{height:175px}
+.theme-obsidian .btn{border-radius:12px}
+.theme-obsidian .btn-ac{border-radius:12px}
+.theme-obsidian .btn-p{box-shadow:0 0 20px var(--t2)}
+.theme-obsidian .nb{border-radius:10px}
+.theme-obsidian .cat{border-radius:10px;border-color:var(--t2)}
+.theme-obsidian .foot{border-radius:16px;border-color:var(--t2)}
+
+/* ════════════ 18. NOIR — Moody dark ════════════ */
+.theme-noir body{font-family:'Josefin Sans',sans-serif}
+.theme-noir .orb{font-family:'Bebas Neue',sans-serif;letter-spacing:4px;font-size:1.1em}
+.theme-noir nav{border-bottom:1px solid var(--t2)}
+.theme-noir .nav-mark{border-radius:0;border:1px solid var(--t)}
+.theme-noir .nav-name{font-family:'Bebas Neue',sans-serif;letter-spacing:5px;font-size:15px}
+.theme-noir .hero{border-radius:0;border:none;border-bottom:2px solid var(--t);background:var(--card);padding:64px 24px 50px}
+.theme-noir .hero h1{font-family:'Bebas Neue',sans-serif;letter-spacing:6px;font-size:clamp(32px,7vw,68px);line-height:1}
+.theme-noir .hero-eyebrow{font-family:'Bebas Neue',sans-serif;letter-spacing:8px;font-size:11px}
+.theme-noir .hero-rule{border-radius:0;width:48px;height:2px}
+.theme-noir .pcard{border-radius:0}
+.theme-noir .pcard-media{height:175px}
+.theme-noir .pcard:hover{border-color:var(--t);transform:none;box-shadow:4px 4px 0 var(--t)}
+.theme-noir .btn{border-radius:0;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+.theme-noir .btn-ac{border-radius:0;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+.theme-noir .nb{border-radius:0;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+.theme-noir .cat{border-radius:0;letter-spacing:1px;text-transform:uppercase;font-size:11px}
+.theme-noir .tag{border-radius:0;letter-spacing:1px;text-transform:uppercase}
+.theme-noir .foot{border-radius:0;border-top:2px solid var(--t);border-bottom:none;border-left:none;border-right:none}
+.theme-noir .p-price{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
+.theme-noir .det-price{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:4px}
+
+/* ════════════ 19. DEEP OCEAN — Dark nautical depth ════════════ */
+.theme-deep-ocean body{font-family:'Urbanist',sans-serif}
+.theme-deep-ocean .orb{font-family:'Space Mono',monospace;letter-spacing:1px;font-size:.9em}
+.theme-deep-ocean nav{background:var(--card)EE;backdrop-filter:blur(20px);border-bottom:1px solid var(--t2)}
+.theme-deep-ocean .nav-mark{border-radius:8px;border:1px solid var(--t2)}
+.theme-deep-ocean .hero{border-radius:16px;border-color:var(--t2);background:linear-gradient(180deg,var(--ts),var(--bg) 80%)}
+.theme-deep-ocean .hero h1{font-family:'Urbanist',sans-serif;font-weight:700;letter-spacing:-0.5px}
+.theme-deep-ocean .pcard{border-radius:14px;border-color:var(--t2)}
+.theme-deep-ocean .pcard:hover{box-shadow:0 8px 32px var(--t2),0 0 0 1px var(--t)}
+.theme-deep-ocean .pcard-media{height:165px}
+.theme-deep-ocean .btn{border-radius:10px}
+.theme-deep-ocean .btn-ac{border-radius:10px}
+.theme-deep-ocean .btn-p{box-shadow:0 4px 16px var(--t2)}
+.theme-deep-ocean .nb{border-radius:8px}
+.theme-deep-ocean .cat{border-radius:8px;border-color:var(--t2)}
+.theme-deep-ocean .foot{border-radius:14px;border-color:var(--t2)}
+.theme-deep-ocean .p-price{font-family:'Space Mono',monospace}
+.theme-deep-ocean .det-price{font-family:'Space Mono',monospace}
+
+/* ════════════ 20. PITCH — Street & hype ════════════ */
+.theme-pitch body{font-family:'Syne',sans-serif}
+.theme-pitch .orb{font-family:'Bebas Neue',sans-serif;letter-spacing:4px;font-size:1.15em}
+.theme-pitch nav{border-bottom:2px solid var(--t)}
+.theme-pitch .nav-mark{border-radius:4px;background:var(--t);border:2px solid var(--t)}
+.theme-pitch .nav-name{font-family:'Bebas Neue',sans-serif;letter-spacing:5px;font-size:15px}
+.theme-pitch .hero{border-radius:8px;background:var(--card);border:2px solid var(--t);padding:56px 24px 44px}
+.theme-pitch .hero h1{font-family:'Bebas Neue',sans-serif;letter-spacing:5px;font-size:clamp(32px,7vw,70px);line-height:1.05}
+.theme-pitch .hero-eyebrow{font-family:'Bebas Neue',sans-serif;letter-spacing:8px;font-size:11px}
+.theme-pitch .hero-rule{height:3px;width:36px;border-radius:0}
+.theme-pitch .pcard{border-radius:8px;border-width:2px}
+.theme-pitch .pcard:hover{border-color:var(--t);box-shadow:4px 4px 0 var(--t);transform:translateY(-2px) translateX(-2px)}
+.theme-pitch .pcard-media{height:170px}
+.theme-pitch .btn{border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+.theme-pitch .btn-ac{border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+.theme-pitch .nb{border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:11px}
+.theme-pitch .cat{border-radius:4px;border-width:2px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:11px}
+.theme-pitch .tag{border-radius:4px;letter-spacing:1px;text-transform:uppercase}
+.theme-pitch .foot{border-radius:8px;border-width:2px;border-color:var(--t)}
+.theme-pitch .p-price{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
+.theme-pitch .det-price{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:4px}
+.theme-pitch .cart-ttl{font-family:'Bebas Neue',sans-serif;letter-spacing:4px}
+
 </style>
 </head>
 <body>
@@ -327,7 +713,7 @@ nav{position:sticky;top:0;z-index:200;background:#FFFFFFF2;backdrop-filter:blur(
     <div class="hero-rule"></div>
     <div id="hero-logo-slot"></div>
     <span class="hero-eyebrow" id="hero-eyebrow-txt">PREMIUM COLLECTION</span>
-    <h1 id="hero-title">Organic Food</h1>
+    <h1 id="hero-title">Clinton Tech Order Suit</h1>
     <p id="hero-sub">Where Innovation Meets Commerce</p>
     <div class="hero-btns">
       <button class="btn btn-wa" id="btn-wa-txt" onclick="doWa()">WhatsApp</button>
@@ -420,7 +806,7 @@ nav{position:sticky;top:0;z-index:200;background:#FFFFFFF2;backdrop-filter:blur(
 // ══════════════════════════════════════════════════════════
 const S = {
   settings:{
-    name:'Organic Food',tagline:'',phone:'',whatsapp:'',address:'',email:'',
+    name:'Clinton Tech Order Suit',tagline:'',phone:'',whatsapp:'',address:'',email:'',
     theme:'#4A7C59',currency:'',logo:'',
     bg_color:'#F6F7FB',card_color:'#FFFFFF',placeholder_bg:'#E8F5E9',
     hero_visible:'1',search_visible:'1',cats_visible:'1',footer_visible:'1',
@@ -442,31 +828,31 @@ const sid = localStorage.getItem('nx-sid') || (()=>{
 })();
 
 // ══════════════════════════════════════════════════════════
-//  20 PRESETS
+//  20 PRESETS — each with full UI personality
 // ══════════════════════════════════════════════════════════
 const PRESETS = [
   // ── Light themes ─────────────────────────────────────────
-  {id:'classic',    name:'Classic',      desc:'Warm amber gold on crisp white',       theme:'#B45309',bg:'#F9F7F4',card:'#FFFFFF',ph:'#FEF3C7'},
-  {id:'forest',     name:'Forest',       desc:'Earthy greens for organic brands',     theme:'#166534',bg:'#F0F7F1',card:'#FFFFFF',ph:'#DCFCE7'},
-  {id:'ocean',      name:'Ocean',        desc:'Calm navy blue — trust & clarity',     theme:'#1E40AF',bg:'#EFF6FF',card:'#FFFFFF',ph:'#DBEAFE'},
-  {id:'rose',       name:'Rose',         desc:'Elegant blush for fashion & beauty',   theme:'#9D174D',bg:'#FFF5F7',card:'#FFFFFF',ph:'#FCE7F3'},
-  {id:'sunset',     name:'Sunset',       desc:'Warm terracotta for food & lifestyle', theme:'#C2410C',bg:'#FFF8F4',card:'#FFFFFF',ph:'#FFEDD5'},
-  {id:'royal',      name:'Royal',        desc:'Deep violet for premium brands',       theme:'#5B21B6',bg:'#F5F3FF',card:'#FFFFFF',ph:'#EDE9FE'},
-  {id:'emerald',    name:'Emerald',      desc:'Vivid green — fresh & energetic',     theme:'#047857',bg:'#ECFDF5',card:'#FFFFFF',ph:'#D1FAE5'},
-  {id:'slate',      name:'Slate',        desc:'Neutral grey — minimalist & clean',   theme:'#334155',bg:'#F8FAFC',card:'#FFFFFF',ph:'#E2E8F0'},
-  {id:'marigold',   name:'Marigold',     desc:'Cheerful yellow for market & craft',  theme:'#A16207',bg:'#FEFCE8',card:'#FFFFFF',ph:'#FEF08A'},
-  {id:'berry',      name:'Berry',        desc:'Deep berry for bold, modern stores',  theme:'#7C2D8A',bg:'#FDF4FF',card:'#FFFFFF',ph:'#F3E8FF'},
-  {id:'coral',      name:'Coral',        desc:'Vibrant coral for lifestyle brands',  theme:'#E03E5E',bg:'#FFF5F6',card:'#FFFFFF',ph:'#FFE4E6'},
-  {id:'sage',       name:'Sage',         desc:'Muted sage for wellness & nature',    theme:'#4D7C5F',bg:'#F4F8F5',card:'#FFFFFF',ph:'#E0EDEA'},
-  {id:'denim',      name:'Denim',        desc:'Classic indigo for everyday shops',   theme:'#1D4ED8',bg:'#F5F8FF',card:'#FFFFFF',ph:'#E0E7FF'},
-  {id:'copper',     name:'Copper',       desc:'Rich copper for artisan & craft',     theme:'#9A3412',bg:'#FFF8F5',card:'#FFFFFF',ph:'#FDDDD0'},
+  {id:'classic',    name:'Classic',      desc:'Warm serif luxury — timeless elegance',       theme:'#B45309',bg:'#F9F7F4',card:'#FFFFFF',ph:'#FEF3C7', font:'Playfair Display, serif',       iconColor:'#B45309'},
+  {id:'forest',     name:'Forest',       desc:'Organic rounded — fresh & natural',           theme:'#166534',bg:'#F0F7F1',card:'#FFFFFF',ph:'#DCFCE7', font:'Urbanist, sans-serif',          iconColor:'#166534'},
+  {id:'ocean',      name:'Ocean',        desc:'Scandinavian clean — trust & clarity',        theme:'#1E40AF',bg:'#EFF6FF',card:'#FFFFFF',ph:'#DBEAFE', font:'DM Sans, sans-serif',           iconColor:'#1E40AF'},
+  {id:'rose',       name:'Rose',         desc:'Fashion editorial — couture & style',         theme:'#9D174D',bg:'#FFF5F7',card:'#FFFFFF',ph:'#FCE7F3', font:'Josefin Sans, sans-serif',      iconColor:'#9D174D'},
+  {id:'sunset',     name:'Sunset',       desc:'Bold editorial — expressive impact',          theme:'#C2410C',bg:'#FFF8F4',card:'#FFFFFF',ph:'#FFEDD5', font:'Syne, sans-serif',              iconColor:'#C2410C'},
+  {id:'royal',      name:'Royal',        desc:'Dark serif luxury — premium presence',        theme:'#5B21B6',bg:'#F5F3FF',card:'#FFFFFF',ph:'#EDE9FE', font:'Playfair Display, serif',       iconColor:'#5B21B6'},
+  {id:'emerald',    name:'Emerald',      desc:'Friendly & fresh — bold rounded energy',      theme:'#047857',bg:'#ECFDF5',card:'#FFFFFF',ph:'#D1FAE5', font:'Urbanist, sans-serif',          iconColor:'#047857'},
+  {id:'slate',      name:'Slate',        desc:'Corporate minimal — clean & efficient',       theme:'#334155',bg:'#F8FAFC',card:'#FFFFFF',ph:'#E2E8F0', font:'DM Sans, sans-serif',           iconColor:'#334155'},
+  {id:'marigold',   name:'Marigold',     desc:'Market artisan — warm bold character',        theme:'#A16207',bg:'#FEFCE8',card:'#FFFFFF',ph:'#FEF08A', font:'Syne, sans-serif',              iconColor:'#A16207'},
+  {id:'berry',      name:'Berry',        desc:'Gradient hero — vivid modern punch',          theme:'#7C2D8A',bg:'#FDF4FF',card:'#FFFFFF',ph:'#F3E8FF', font:'Urbanist, sans-serif',          iconColor:'#7C2D8A'},
+  {id:'coral',      name:'Coral',        desc:'Vibrant lifestyle — energetic & fun',         theme:'#E03E5E',bg:'#FFF5F6',card:'#FFFFFF',ph:'#FFE4E6', font:'Syne, sans-serif',              iconColor:'#E03E5E'},
+  {id:'sage',       name:'Sage',         desc:'Wellness & nature — calm dashed softness',    theme:'#4D7C5F',bg:'#F4F8F5',card:'#FFFFFF',ph:'#E0EDEA', font:'Raleway, sans-serif',           iconColor:'#4D7C5F'},
+  {id:'denim',      name:'Denim',        desc:'Casual everyday — reliable & friendly',       theme:'#1D4ED8',bg:'#F5F8FF',card:'#FFFFFF',ph:'#E0E7FF', font:'Urbanist, sans-serif',          iconColor:'#1D4ED8'},
+  {id:'copper',     name:'Copper',       desc:'Artisan craft — uppercase structured pride',  theme:'#9A3412',bg:'#FFF8F5',card:'#FFFFFF',ph:'#FDDDD0', font:'Josefin Sans, sans-serif',      iconColor:'#9A3412'},
   // ── Dark themes ──────────────────────────────────────────
-  {id:'midnight',   name:'Midnight',     desc:'Gold on deep night — bold luxury',    theme:'#F59E0B',bg:'#0D0F1A',card:'#161824',ph:'#1E2235'},
-  {id:'carbon',     name:'Carbon',       desc:'Cyan on industrial charcoal',         theme:'#22D3EE',bg:'#0F1117',card:'#181B24',ph:'#1A1F2E'},
-  {id:'obsidian',   name:'Obsidian',     desc:'Violet on pure black — ultra dark',   theme:'#A78BFA',bg:'#09090B',card:'#111114',ph:'#1A1524'},
-  {id:'noir',       name:'Noir',         desc:'Ember red on matte dark grey',        theme:'#F87171',bg:'#111215',card:'#1A1C21',ph:'#1F1618'},
-  {id:'deep-ocean', name:'Deep Ocean',   desc:'Teal on dark navy depth',             theme:'#2DD4BF',bg:'#0C1220',card:'#121A2C',ph:'#0E1A28'},
-  {id:'pitch',      name:'Pitch',        desc:'Lime pop on near-black — street edge',theme:'#84CC16',bg:'#0A0B0D',card:'#121316',ph:'#101408'},
+  {id:'midnight',   name:'Midnight',     desc:'Gold serif on deep night — bold luxury',      theme:'#F59E0B',bg:'#0D0F1A',card:'#161824',ph:'#1E2235', font:'Playfair Display, serif',       iconColor:'#F59E0B'},
+  {id:'carbon',     name:'Carbon',       desc:'Monospace cyber — industrial terminal grit',  theme:'#22D3EE',bg:'#0F1117',card:'#181B24',ph:'#1A1F2E', font:'IBM Plex Mono, monospace',      iconColor:'#22D3EE'},
+  {id:'obsidian',   name:'Obsidian',     desc:'Violet glow on pure black — ultra dark',      theme:'#A78BFA',bg:'#09090B',card:'#111114',ph:'#1A1524', font:'Syne, sans-serif',              iconColor:'#A78BFA'},
+  {id:'noir',       name:'Noir',         desc:'Ember red on dark — theatrical & cinematic',  theme:'#F87171',bg:'#111215',card:'#1A1C21',ph:'#1F1618', font:'Josefin Sans, sans-serif',      iconColor:'#F87171'},
+  {id:'deep-ocean', name:'Deep Ocean',   desc:'Teal mono on dark navy — depth & precision',  theme:'#2DD4BF',bg:'#0C1220',card:'#121A2C',ph:'#0E1A28', font:'Space Mono, monospace',         iconColor:'#2DD4BF'},
+  {id:'pitch',      name:'Pitch',        desc:'Lime on near-black — street hype culture',    theme:'#84CC16',bg:'#0A0B0D',card:'#121316',ph:'#101408', font:'Syne, sans-serif',              iconColor:'#84CC16'},
 ];
 
 // ══════════════════════════════════════════════════════════
@@ -487,6 +873,11 @@ async function init() {
     const [settings, products] = await Promise.all([api('GET','/settings'), api('GET','/products')]);
     Object.assign(S.settings, settings);
     S.products = Array.isArray(products) ? products : [];
+    // Restore iconColor from preset if missing
+    if(S.settings._themeId && !S.settings._iconColor){
+      const pp=PRESETS.find(x=>x.id===S.settings._themeId);
+      if(pp) S.settings._iconColor=pp.iconColor;
+    }
   } catch(e) { console.error('load error', e); }
 
   applyFullTheme(S.settings);
@@ -571,6 +962,17 @@ function applyFullTheme(s) {
   const navBg = card+'F2';
   const nav=document.getElementById('navbar');
   if(nav) nav.style.background=navBg;
+
+  // Theme class on <html> — drives full UI personality
+  const allThemeClasses = ['classic','forest','ocean','rose','sunset','royal','emerald',
+    'slate','marigold','berry','coral','sage','denim','copper',
+    'midnight','carbon','obsidian','noir','deep-ocean','pitch'];
+  const htmlEl = document.documentElement;
+  allThemeClasses.forEach(c=>htmlEl.classList.remove('theme-'+c));
+  if(s._themeId) htmlEl.classList.add('theme-'+s._themeId);
+
+  // Icon / svg color CSS variable
+  rt.style.setProperty('--icon-color', s._iconColor||theme);
 }
 
 function adjustBrightness(hex, factor) {
@@ -900,8 +1302,9 @@ function rTabA(){
         ${isDark(p.bg)?'<div class="preset-dark-badge">DARK</div>':''}
       </div>
       <div class="preset-body">
-        <div class="preset-name" style="color:${p.theme}">${p.name}</div>
+        <div class="preset-name" style="color:${p.theme};font-family:${p.font}">${p.name}</div>
         <div class="preset-desc">${p.desc}</div>
+        <div style="font-size:10px;color:var(--muted);margin-bottom:6px;font-style:italic">${p.font.split(',')[0]}</div>
         <div class="preset-btns">
           <button class="btn-preview" onclick="previewPreset('${p.id}')">Preview</button>
           <button class="btn-apply" style="background:${p.theme}" onclick="applyPreset('${p.id}')">Apply</button>
@@ -985,8 +1388,7 @@ function rTabA(){
 function previewPreset(id){
   S.previewPreset=id;
   const p=PRESETS.find(x=>x.id===id);if(!p)return;
-  applyFullTheme({...S.settings,theme:p.theme,bg_color:p.bg,card_color:p.card,placeholder_bg:p.ph});
-  // Update pickers in UI
+  applyFullTheme({...S.settings,theme:p.theme,bg_color:p.bg,card_color:p.card,placeholder_bg:p.ph,_themeId:p.id,_iconColor:p.iconColor});
   syncPickers({theme:p.theme,bg_color:p.bg,card_color:p.card,placeholder_bg:p.ph});
   document.querySelectorAll('.preset-card').forEach(el=>el.classList.remove('active-preset'));
   document.getElementById('pc-'+id)?.classList.add('active-preset');
@@ -995,12 +1397,22 @@ function previewPreset(id){
 function applyPreset(id){
   const p=PRESETS.find(x=>x.id===id);if(!p)return;
   S.settings.theme=p.theme;S.settings.bg_color=p.bg;S.settings.card_color=p.card;S.settings.placeholder_bg=p.ph;
+  S.settings._themeId=p.id;S.settings._iconColor=p.iconColor;
   S.previewPreset=id;
   applyFullTheme(S.settings);
   syncPickers(S.settings);
   toast(p.name+' applied — click Save to keep','ok');
 }
-function resetPreview(){S.previewPreset=null;applyFullTheme(S.settings);syncPickers(S.settings);document.querySelectorAll('.preset-card').forEach(el=>el.classList.remove('active-preset'));toast('Preview reset','info');}
+function resetPreview(){
+  S.previewPreset=null;
+  const allThemeClasses=['classic','forest','ocean','rose','sunset','royal','emerald',
+    'slate','marigold','berry','coral','sage','denim','copper',
+    'midnight','carbon','obsidian','noir','deep-ocean','pitch'];
+  allThemeClasses.forEach(c=>document.documentElement.classList.remove('theme-'+c));
+  applyFullTheme(S.settings);syncPickers(S.settings);
+  document.querySelectorAll('.preset-card').forEach(el=>el.classList.remove('active-preset'));
+  toast('Preview reset','info');
+}
 
 function syncPickers(s){
   const pairs=[['a-theme','a-theme-hex','theme'],['a-bg','a-bg-hex','bg_color'],['a-card','a-card-hex','card_color'],['a-ph','a-ph-hex','placeholder_bg']];
@@ -1036,6 +1448,11 @@ async function saveAppearance(){
   Object.entries(textMap).forEach(([key,id])=>{
     const el=document.getElementById(id);if(el)S.settings[key]=el.value.trim();
   });
+  // Persist theme id and icon color so they survive page reload
+  if(S.previewPreset){
+    const pp=PRESETS.find(x=>x.id===S.previewPreset);
+    if(pp){S.settings._themeId=pp.id;S.settings._iconColor=pp.iconColor;}
+  }
   const payload={...S.settings};
   const r=await api('POST','/settings',payload);
   if(r.success){applyFullTheme(S.settings);updNav();rStore();toast('Appearance saved','ok');}
