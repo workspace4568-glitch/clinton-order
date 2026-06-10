@@ -688,6 +688,284 @@ nav{position:sticky;top:0;z-index:200;background:#FFFFFFF2;backdrop-filter:blur(
 .theme-pitch .det-price{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:4px}
 .theme-pitch .cart-ttl{font-family:'Bebas Neue',sans-serif;letter-spacing:4px}
 
+
+/* ═══════════════════════════════════════════════════════
+   LAYOUT SYSTEM — 10 distinct storefront personalities
+   Applied via data-layout="X" on <body>
+   ═══════════════════════════════════════════════════════ */
+
+/* ── 1. MARKET (Jumia/Konga) ──────────────────────────── */
+[data-layout="market"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:10px}
+[data-layout="market"] .pcard{border-radius:6px;border-width:1px}
+[data-layout="market"] .pcard-media{height:145px}
+[data-layout="market"] .pcard-body{padding:10px 11px}
+[data-layout="market"] .pcard-name{font-size:13px;font-weight:600;margin-bottom:3px}
+[data-layout="market"] .pcard-desc{font-size:12px;-webkit-line-clamp:1;margin-bottom:7px}
+[data-layout="market"] .p-price{font-size:15px}
+[data-layout="market"] .pcard-acts{flex-direction:column;gap:5px}
+[data-layout="market"] .btn-ac{border-radius:4px;font-size:12px;padding:7px}
+[data-layout="market"] .btn-vw{border-radius:4px;font-size:11px;padding:6px}
+[data-layout="market"] nav{border-bottom:2px solid var(--t);background:var(--t)!important}
+[data-layout="market"] .nav-name,.nav-mark{color:#fff!important}
+[data-layout="market"] .nav-name{color:#fff}
+[data-layout="market"] .nb{color:#ffffffCC!important}
+[data-layout="market"] .nb:hover,.nb.on{background:#ffffff22!important;color:#fff!important;border-color:#ffffff44!important}
+[data-layout="market"] .cart-pip{background:#fff;color:var(--t)}
+[data-layout="market"] .hero{border-radius:8px;padding:36px 20px 30px;text-align:left;display:flex;flex-direction:column}
+[data-layout="market"] .hero h1{font-size:clamp(22px,4vw,36px)}
+[data-layout="market"] .hero-btns{justify-content:flex-start}
+[data-layout="market"] .toolbar{flex-direction:column;gap:8px}
+[data-layout="market"] .cats{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+[data-layout="market"] .cat{flex-shrink:0;border-radius:4px;font-size:12px;padding:6px 12px}
+[data-layout="market"] .market-deals-banner{background:var(--t);color:#fff;border-radius:6px;padding:10px 14px;display:flex;align-items:center;gap:10px;margin-bottom:16px;font-weight:700;font-size:13px}
+[data-layout="market"] .market-deals-badge{background:#fff;color:var(--t);border-radius:4px;padding:2px 8px;font-size:11px;font-weight:800}
+[data-layout="market"] .disc-bar{background:var(--t);color:#fff;opacity:.92;font-size:11px;font-weight:800}
+[data-layout="market"] .foot{border-radius:4px}
+
+/* ── 2. MEGA (Amazon) ─────────────────────────────────── */
+[data-layout="mega"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+[data-layout="mega"] .pcard{border-radius:4px;border-color:var(--border)}
+[data-layout="mega"] .pcard-media{height:200px;background:#fff}
+[data-layout="mega"] .pcard-body{padding:12px}
+[data-layout="mega"] .pcard-name{font-size:14px;font-weight:400;margin-bottom:4px;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+[data-layout="mega"] .p-price{font-family:inherit;font-size:21px;font-weight:700}
+[data-layout="mega"] .pcard-desc{display:none}
+[data-layout="mega"] .btn-ac{border-radius:100px;font-size:13px;padding:8px;background:#F90;color:#111;box-shadow:none;font-weight:700}
+[data-layout="mega"] .btn-ac:hover{filter:brightness(.95)}
+[data-layout="mega"] .btn-vw{border-radius:100px;font-size:12px;padding:7px 10px;background:#fff;border:1px solid var(--border2)}
+[data-layout="mega"] nav{background:#131921!important;border-bottom:none}
+[data-layout="mega"] .nav-name{color:#fff}
+[data-layout="mega"] .nb{color:#fff!important}
+[data-layout="mega"] .nb:hover{background:#ffffff22!important;color:#fff!important}
+[data-layout="mega"] .nb.on{background:#F9000022!important;border-color:#F90!important;color:#F90!important}
+[data-layout="mega"] .cart-pip{background:#F90;color:#111}
+[data-layout="mega"] .nav-mark{background:#F90;color:#111}
+[data-layout="mega"] .hero{border-radius:6px;text-align:left;padding:40px 28px 36px}
+[data-layout="mega"] .hero h1{font-size:clamp(22px,4vw,38px)}
+[data-layout="mega"] .hero-btns{justify-content:flex-start}
+[data-layout="mega"] .mega-trust{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px;padding:14px 0;border-bottom:1px solid var(--border2)}
+[data-layout="mega"] .mega-trust-item{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--sub)}
+[data-layout="mega"] .mega-trust-dot{width:20px;height:20px;border-radius:50%;background:var(--ts);border:1.5px solid var(--t2);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--t);font-weight:800;flex-shrink:0}
+[data-layout="mega"] .p-disc{border-radius:2px}
+[data-layout="mega"] .star-row{display:flex;align-items:center;gap:4px;margin-bottom:6px}
+[data-layout="mega"] .stars{color:#F90;font-size:12px;letter-spacing:-1px}
+[data-layout="mega"] .star-count{font-size:11px;color:#007185}
+
+/* ── 3. CLASSIFIEDS (Jiji/OLX) ───────────────────────── */
+[data-layout="classifieds"] .pgrid{grid-template-columns:1fr;gap:0;border-radius:8px;overflow:hidden;border:1.5px solid var(--border2)}
+[data-layout="classifieds"] .pcard{border-radius:0;border:none;border-bottom:1px solid var(--border2);display:flex;align-items:stretch;flex-direction:row;overflow:visible}
+[data-layout="classifieds"] .pcard:last-child{border-bottom:none}
+[data-layout="classifieds"] .pcard:hover{transform:none;box-shadow:none;background:var(--bg2)}
+[data-layout="classifieds"] .pcard-media{width:130px;min-width:130px;height:auto;min-height:110px;flex-shrink:0;border-radius:0}
+[data-layout="classifieds"] .pcard-body{flex:1;padding:13px 15px;display:flex;flex-direction:column;justify-content:space-between}
+[data-layout="classifieds"] .pcard-name{font-size:15px;font-weight:600;margin-bottom:4px}
+[data-layout="classifieds"] .pcard-desc{-webkit-line-clamp:2;margin-bottom:8px}
+[data-layout="classifieds"] .pcard-tags{margin-bottom:4px}
+[data-layout="classifieds"] .price-row{margin-bottom:8px}
+[data-layout="classifieds"] .p-price{font-family:inherit;font-size:18px;font-weight:700}
+[data-layout="classifieds"] .pcard-acts{flex-direction:row;gap:7px}
+[data-layout="classifieds"] .btn-ac{border-radius:5px;flex:1;font-size:13px;padding:8px}
+[data-layout="classifieds"] .btn-vw{border-radius:5px;font-size:12px;padding:8px 11px}
+[data-layout="classifieds"] .badges-r{top:6px;right:6px}
+[data-layout="classifieds"] .badges-l{top:6px;left:6px}
+[data-layout="classifieds"] .disc-bar{display:none}
+[data-layout="classifieds"] .classifieds-loc{font-size:11px;color:var(--muted);margin-bottom:5px;display:flex;align-items:center;gap:4px}
+[data-layout="classifieds"] .classifieds-loc::before{content:'📍';font-size:10px}
+[data-layout="classifieds"] nav{border-bottom:2px solid var(--t)}
+[data-layout="classifieds"] .hero{border-radius:6px;text-align:left;padding:36px 24px 30px;border-style:dashed}
+[data-layout="classifieds"] .hero h1{font-size:clamp(20px,4vw,34px)}
+[data-layout="classifieds"] .hero-btns{justify-content:flex-start}
+[data-layout="classifieds"] .toolbar{flex-direction:column}
+[data-layout="classifieds"] .cats{overflow-x:auto;flex-wrap:nowrap}
+[data-layout="classifieds"] .cat{flex-shrink:0;border-radius:4px;font-size:12px}
+
+/* ── 4. HAUL (Temu/Shein) ─────────────────────────────── */
+[data-layout="haul"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+[data-layout="haul"] .pcard{border-radius:10px;border:none;box-shadow:0 2px 10px #00000012}
+[data-layout="haul"] .pcard:hover{transform:scale(1.02);box-shadow:0 6px 20px #00000018}
+[data-layout="haul"] .pcard-media{height:175px}
+[data-layout="haul"] .pcard-body{padding:9px 10px}
+[data-layout="haul"] .pcard-name{font-size:13px;font-weight:600;margin-bottom:2px;-webkit-line-clamp:2}
+[data-layout="haul"] .pcard-desc{display:none}
+[data-layout="haul"] .pcard-tags{display:none}
+[data-layout="haul"] .p-price{font-size:16px;font-weight:800;color:var(--t)}
+[data-layout="haul"] .p-orig{font-size:11px}
+[data-layout="haul"] .p-stock{display:none}
+[data-layout="haul"] .pcard-acts{gap:5px}
+[data-layout="haul"] .btn-ac{border-radius:8px;font-size:12px;padding:8px 7px;font-weight:800}
+[data-layout="haul"] .btn-vw{display:none}
+[data-layout="haul"] .disc-bar{font-size:12px;font-weight:800;padding:4px 10px;border-radius:0 0 10px 10px}
+[data-layout="haul"] .haul-flash{background:linear-gradient(135deg,var(--t),#e11d48);color:#fff;border-radius:10px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-weight:800;font-size:14px}
+[data-layout="haul"] .haul-flash-badge{background:#fff;color:var(--t);border-radius:6px;padding:3px 10px;font-size:12px;font-weight:800}
+[data-layout="haul"] .haul-flash-count{font-size:11px;opacity:.85;margin-top:2px;font-weight:400}
+[data-layout="haul"] nav{background:var(--t)!important;border-bottom:none}
+[data-layout="haul"] .nav-name,.nb{color:#fff!important}
+[data-layout="haul"] .nb:hover,.nb.on{background:#ffffff22!important;color:#fff!important;border-color:#ffffff33!important}
+[data-layout="haul"] .cart-pip{background:#fff;color:var(--t)}
+[data-layout="haul"] .hero{padding:28px 18px 22px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--t),var(--ts))}
+[data-layout="haul"] .hero h1{color:var(--text);font-size:clamp(20px,4vw,32px)}
+[data-layout="haul"] .hero p{color:var(--sub)}
+
+/* ── 5. BOUTIQUE (Etsy/artisan) ───────────────────────── */
+[data-layout="boutique"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+[data-layout="boutique"] .pcard{border:none;box-shadow:none;background:transparent}
+[data-layout="boutique"] .pcard:hover{transform:translateY(-5px)}
+[data-layout="boutique"] .pcard-media{height:250px;border-radius:8px;overflow:hidden;box-shadow:0 4px 16px #00000014}
+[data-layout="boutique"] .pcard-body{padding:14px 4px}
+[data-layout="boutique"] .pcard-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;margin-bottom:3px}
+[data-layout="boutique"] .pcard-desc{font-size:12px;-webkit-line-clamp:1;margin-bottom:8px}
+[data-layout="boutique"] .p-price{font-family:'Playfair Display',serif;font-size:17px}
+[data-layout="boutique"] .btn-ac{border-radius:100px;font-size:12px;padding:8px 14px}
+[data-layout="boutique"] .btn-vw{border-radius:100px;font-size:12px;padding:8px 11px}
+[data-layout="boutique"] .disc-bar{display:none}
+[data-layout="boutique"] .hero{background:none;border:none;text-align:left;padding:50px 0 40px}
+[data-layout="boutique"] .hero h1{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:clamp(28px,5vw,50px)}
+[data-layout="boutique"] .hero-eyebrow{font-size:10px;letter-spacing:8px}
+[data-layout="boutique"] .hero-btns{justify-content:flex-start}
+[data-layout="boutique"] .boutique-story{background:var(--ts);border:1.5px solid var(--t2);border-radius:12px;padding:20px 24px;margin-bottom:24px;font-size:14px;line-height:1.8;color:var(--sub);font-style:italic}
+[data-layout="boutique"] nav{border-bottom:1px solid var(--border);background:#FFFFFFEE!important}
+[data-layout="boutique"] .cats{justify-content:center}
+[data-layout="boutique"] .cat{border-radius:100px;font-size:12px;border-style:dashed}
+[data-layout="boutique"] .cat.on{border-style:solid}
+[data-layout="boutique"] .foot{border-top:1px solid var(--border);background:none;border-left:none;border-right:none;border-bottom:none;border-radius:0;box-shadow:none;padding:28px 0}
+
+/* ── 6. DROP (Supreme/hype) ───────────────────────────── */
+[data-layout="drop"] .pgrid{grid-template-columns:1fr;gap:0;max-width:600px;margin:0 auto}
+[data-layout="drop"] .pcard{border-radius:0;border:none;border-bottom:2px solid var(--border2);display:flex;flex-direction:row;align-items:stretch}
+[data-layout="drop"] .pcard:last-child{border-bottom:none}
+[data-layout="drop"] .pcard:hover{transform:none;background:var(--ts);border-bottom-color:var(--t)}
+[data-layout="drop"] .pcard-media{width:110px;min-width:110px;height:110px;flex-shrink:0;border-radius:0}
+[data-layout="drop"] .pcard-body{flex:1;padding:16px 18px;display:flex;flex-direction:column;justify-content:center}
+[data-layout="drop"] .pcard-name{font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+[data-layout="drop"] .pcard-desc{-webkit-line-clamp:1;font-size:13px;margin-bottom:8px}
+[data-layout="drop"] .pcard-tags{margin-bottom:4px}
+[data-layout="drop"] .p-price{font-size:20px;font-weight:800}
+[data-layout="drop"] .pcard-acts{gap:8px;margin-top:8px}
+[data-layout="drop"] .btn-ac{border-radius:0;letter-spacing:1px;text-transform:uppercase;font-size:12px;padding:10px 14px}
+[data-layout="drop"] .btn-vw{border-radius:0;letter-spacing:1px;text-transform:uppercase;font-size:11px;padding:10px}
+[data-layout="drop"] nav{border-bottom:3px solid var(--t)}
+[data-layout="drop"] .hero{border-radius:0;border-left:4px solid var(--t);border-top:none;border-right:none;border-bottom:none;text-align:left;padding:50px 28px 42px;background:var(--card);margin-bottom:0}
+[data-layout="drop"] .hero h1{font-size:clamp(30px,7vw,64px);font-weight:800;text-transform:uppercase;letter-spacing:2px;line-height:1}
+[data-layout="drop"] .hero-btns{justify-content:flex-start}
+[data-layout="drop"] .hero-eyebrow{letter-spacing:8px;font-size:9px}
+[data-layout="drop"] .drop-divider{height:3px;background:var(--t);margin:20px 0;border-radius:0;max-width:600px;margin-left:auto;margin-right:auto}
+[data-layout="drop"] .drop-count{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;max-width:600px;margin-left:auto;margin-right:auto}
+[data-layout="drop"] .cats{justify-content:flex-start;max-width:600px;margin-left:auto;margin-right:auto}
+[data-layout="drop"] .cat{border-radius:0;letter-spacing:1px;text-transform:uppercase;font-size:11px;border-width:2px}
+[data-layout="drop"] .foot{border-radius:0;border-top:3px solid var(--t);border-bottom:none;border-left:none;border-right:none}
+
+/* ── 7. MINIMAL (Scandinavian DTC) ───────────────────── */
+[data-layout="minimal"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px}
+[data-layout="minimal"] .pcard{border:none;box-shadow:none;background:transparent;border-radius:0}
+[data-layout="minimal"] .pcard:hover{transform:translateY(-3px)}
+[data-layout="minimal"] .pcard-media{height:300px;border-radius:0;overflow:hidden}
+[data-layout="minimal"] .pcard-media img{transition:.5s ease}
+[data-layout="minimal"] .pcard:hover .pcard-media img{transform:scale(1.04)}
+[data-layout="minimal"] .pcard-body{padding:14px 0}
+[data-layout="minimal"] .pcard-name{font-size:14px;font-weight:400;letter-spacing:.3px;margin-bottom:3px}
+[data-layout="minimal"] .pcard-desc{display:none}
+[data-layout="minimal"] .pcard-tags{display:none}
+[data-layout="minimal"] .p-price{font-family:inherit;font-size:14px;font-weight:300;letter-spacing:1px}
+[data-layout="minimal"] .p-stock{display:none}
+[data-layout="minimal"] .pcard-acts{gap:6px;margin-top:10px}
+[data-layout="minimal"] .btn-ac{border-radius:0;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:400;padding:10px}
+[data-layout="minimal"] .btn-vw{border-radius:0;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:10px}
+[data-layout="minimal"] .disc-bar{display:none}
+[data-layout="minimal"] .badges-r,.badges-l{display:none}
+[data-layout="minimal"] nav{border-bottom:1px solid var(--border);background:var(--bg)!important}
+[data-layout="minimal"] .hero{background:none;border:none;padding:80px 0 60px;text-align:left}
+[data-layout="minimal"] .hero h1{font-size:clamp(28px,5vw,52px);font-weight:300;letter-spacing:-1px}
+[data-layout="minimal"] .hero p{font-size:14px;font-weight:300;letter-spacing:.3px}
+[data-layout="minimal"] .hero-eyebrow{letter-spacing:10px;font-size:9px}
+[data-layout="minimal"] .hero-rule{width:24px;height:1px}
+[data-layout="minimal"] .hero-btns{justify-content:flex-start}
+[data-layout="minimal"] .cats{border-bottom:1px solid var(--border);padding-bottom:14px;gap:0}
+[data-layout="minimal"] .cat{border:none;border-radius:0;border-bottom:2px solid transparent;background:none;padding:6px 16px;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:400;box-shadow:none}
+[data-layout="minimal"] .cat.on{border-bottom-color:var(--t);color:var(--t)}
+[data-layout="minimal"] .cat:hover{background:none;border-color:transparent;color:var(--text)}
+[data-layout="minimal"] .foot{border-top:1px solid var(--border);background:none;border-left:none;border-right:none;border-bottom:none;border-radius:0;box-shadow:none;padding:24px 0}
+
+/* ── 8. TECH (Newegg/B&H) ─────────────────────────────── */
+[data-layout="tech"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+[data-layout="tech"] .pcard{border-radius:3px;border-width:1px;border-color:var(--border2)}
+[data-layout="tech"] .pcard:hover{border-color:var(--t);box-shadow:0 0 0 1px var(--t)}
+[data-layout="tech"] .pcard-media{height:160px;background:#111}
+[data-layout="tech"] .pcard-body{padding:11px 13px}
+[data-layout="tech"] .pcard-name{font-size:13px;font-weight:600;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:4px}
+[data-layout="tech"] .pcard-desc{font-size:12px;-webkit-line-clamp:2;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:8px}
+[data-layout="tech"] .p-price{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:700}
+[data-layout="tech"] .btn-ac{border-radius:3px;font-size:12px;padding:8px;letter-spacing:.5px}
+[data-layout="tech"] .btn-vw{border-radius:3px;font-size:11px;padding:8px 10px}
+[data-layout="tech"] .tech-spec-row{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:8px;border-top:1px solid var(--border2);padding-top:7px;line-height:1.7}
+[data-layout="tech"] nav{background:#0D1117!important;border-bottom:2px solid var(--t)}
+[data-layout="tech"] .nav-name{color:#fff}
+[data-layout="tech"] .nb{color:#ffffffCC!important}
+[data-layout="tech"] .nb:hover,.nb.on{background:var(--t2)!important;color:var(--t)!important;border-color:var(--t)!important}
+[data-layout="tech"] .hero{border-radius:4px;text-align:left;padding:40px 26px 34px;background:var(--card);border-color:var(--t2)}
+[data-layout="tech"] .hero h1{font-family:'IBM Plex Mono',monospace;font-size:clamp(18px,4vw,32px);letter-spacing:1px}
+[data-layout="tech"] .hero-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:4px}
+[data-layout="tech"] .hero-btns{justify-content:flex-start}
+[data-layout="tech"] .cats{overflow-x:auto;flex-wrap:nowrap}
+[data-layout="tech"] .cat{flex-shrink:0;border-radius:3px;font-size:12px;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px}
+[data-layout="tech"] .toolbar .srch input{font-family:'IBM Plex Mono',monospace;font-size:13px}
+
+/* ── 9. LUXURY (Net-a-Porter/Farfetch) ───────────────── */
+[data-layout="luxury"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:2px;background:var(--border)}
+[data-layout="luxury"] .pcard{border:none;border-radius:0;box-shadow:none;position:relative;overflow:hidden}
+[data-layout="luxury"] .pcard:hover{transform:none}
+[data-layout="luxury"] .pcard-media{height:340px;overflow:hidden}
+[data-layout="luxury"] .pcard-media img{transition:.6s ease;transform:scale(1.03)}
+[data-layout="luxury"] .pcard:hover .pcard-media img{transform:scale(1)}
+[data-layout="luxury"] .pcard-body{padding:16px 18px}
+[data-layout="luxury"] .pcard-name{font-size:13px;font-weight:400;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+[data-layout="luxury"] .pcard-desc{display:none}
+[data-layout="luxury"] .pcard-tags{display:none}
+[data-layout="luxury"] .p-price{font-family:inherit;font-size:14px;font-weight:300;letter-spacing:2px}
+[data-layout="luxury"] .p-stock{display:none}
+[data-layout="luxury"] .pcard-acts{justify-content:space-between;margin-top:14px}
+[data-layout="luxury"] .btn-ac{border-radius:0;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:400;padding:11px 16px;flex:none;min-width:130px}
+[data-layout="luxury"] .btn-vw{border-radius:0;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:11px 12px}
+[data-layout="luxury"] .disc-bar{font-size:10px;letter-spacing:2px;font-weight:400;padding:5px 12px;background:none;color:var(--t)}
+[data-layout="luxury"] .badges-r{display:none}
+[data-layout="luxury"] nav{border-bottom:1px solid var(--border);background:var(--bg)!important;height:70px}
+[data-layout="luxury"] .nav-inner{height:70px}
+[data-layout="luxury"] .nav-name{letter-spacing:6px;font-size:11px;text-transform:uppercase}
+[data-layout="luxury"] .hero{background:none;border:none;padding:90px 0 70px;text-align:center}
+[data-layout="luxury"] .hero h1{font-size:clamp(22px,4vw,44px);font-weight:300;letter-spacing:8px;text-transform:uppercase}
+[data-layout="luxury"] .hero-eyebrow{letter-spacing:12px;font-size:8px}
+[data-layout="luxury"] .hero-rule{width:16px;height:1px;border-radius:0}
+[data-layout="luxury"] .hero p{font-size:13px;font-weight:300;letter-spacing:2px}
+[data-layout="luxury"] .hero-btns{justify-content:center}
+[data-layout="luxury"] .cats{justify-content:center;border-bottom:1px solid var(--border);padding-bottom:0;gap:0}
+[data-layout="luxury"] .cat{border:none;border-radius:0;background:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:400;padding:10px 18px;border-bottom:1.5px solid transparent;box-shadow:none}
+[data-layout="luxury"] .cat.on{border-bottom-color:var(--t);color:var(--t)}
+[data-layout="luxury"] .cat:hover{background:none;color:var(--text)}
+[data-layout="luxury"] .foot{border-top:1px solid var(--border);background:none;border-left:none;border-right:none;border-bottom:none;border-radius:0;box-shadow:none;padding:24px 0;margin-top:2px}
+
+/* ── 10. FRESH (Instacart/grocery) ───────────────────── */
+[data-layout="fresh"] .pgrid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:13px}
+[data-layout="fresh"] .pcard{border-radius:14px;border:1.5px solid var(--border2)}
+[data-layout="fresh"] .pcard:hover{border-color:var(--t);box-shadow:0 6px 24px var(--t2)}
+[data-layout="fresh"] .pcard-media{height:140px;border-radius:12px 12px 0 0}
+[data-layout="fresh"] .pcard-body{padding:11px 13px}
+[data-layout="fresh"] .pcard-name{font-size:14px;font-weight:700;margin-bottom:2px}
+[data-layout="fresh"] .pcard-desc{-webkit-line-clamp:1;font-size:12px;margin-bottom:8px}
+[data-layout="fresh"] .p-price{font-size:17px;font-weight:800}
+[data-layout="fresh"] .btn-ac{border-radius:100px;font-size:12px;padding:8px;font-weight:700}
+[data-layout="fresh"] .btn-vw{border-radius:100px;font-size:11px;padding:8px 11px}
+[data-layout="fresh"] nav{border-radius:0 0 16px 16px;margin:0 14px;top:8px;border:1.5px solid var(--border2);box-shadow:0 4px 20px #00000010}
+[data-layout="fresh"] .hero{border-radius:16px;padding:36px 22px 30px;border-style:solid}
+[data-layout="fresh"] .hero h1{font-size:clamp(22px,4vw,36px)}
+[data-layout="fresh"] .hero-btns{justify-content:flex-start}
+[data-layout="fresh"] .fresh-delivery{display:flex;align-items:center;gap:8px;background:#F0FDF4;border:1.5px solid #16A34A33;border-radius:10px;padding:10px 14px;margin-bottom:16px;font-size:13px;font-weight:600;color:#15803D}
+[data-layout="fresh"] .fresh-delivery-dot{width:8px;height:8px;border-radius:50%;background:#15803D;animation:pulse 1.5s infinite}
+[data-layout="fresh"] .fresh-cats{display:flex;gap:10px;margin-bottom:18px;overflow-x:auto;padding-bottom:4px}
+[data-layout="fresh"] .fresh-cat-chip{flex-shrink:0;background:var(--card);border:1.5px solid var(--border2);border-radius:100px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;color:var(--sub);white-space:nowrap;transition:.14s;box-shadow:var(--sh)}
+[data-layout="fresh"] .fresh-cat-chip.on{background:var(--ts);border-color:var(--t2);color:var(--t)}
+[data-layout="fresh"] .fresh-cat-chip:hover{border-color:var(--t);color:var(--t)}
+[data-layout="fresh"] .cat,.cats{display:none!important}
+[data-layout="fresh"] .foot{border-radius:14px}
+
 </style>
 </head>
 <body>
@@ -727,7 +1005,8 @@ nav{position:sticky;top:0;z-index:200;background:#FFFFFFF2;backdrop-filter:blur(
     <div class="cats" id="cats" style="display:none"></div>
   </div>
 
-  <div class="pgrid" id="pgrid"></div>
+  <div id="pre-grid"></div>
+    <div class="pgrid" id="pgrid"></div>
 
   <div class="foot fadeUp" id="footer-section">
     <div><div class="foot-name orb" id="sf-name"></div><div class="foot-addr" id="sf-addr"></div></div>
@@ -832,27 +1111,27 @@ const sid = localStorage.getItem('nx-sid') || (()=>{
 // ══════════════════════════════════════════════════════════
 const PRESETS = [
   // ── Light themes ─────────────────────────────────────────
-  {id:'classic',    name:'Classic',      desc:'Warm serif luxury — timeless elegance',       theme:'#B45309',bg:'#F9F7F4',card:'#FFFFFF',ph:'#FEF3C7', font:'Playfair Display, serif',       iconColor:'#B45309'},
-  {id:'forest',     name:'Forest',       desc:'Organic rounded — fresh & natural',           theme:'#166534',bg:'#F0F7F1',card:'#FFFFFF',ph:'#DCFCE7', font:'Urbanist, sans-serif',          iconColor:'#166534'},
-  {id:'ocean',      name:'Ocean',        desc:'Scandinavian clean — trust & clarity',        theme:'#1E40AF',bg:'#EFF6FF',card:'#FFFFFF',ph:'#DBEAFE', font:'DM Sans, sans-serif',           iconColor:'#1E40AF'},
-  {id:'rose',       name:'Rose',         desc:'Fashion editorial — couture & style',         theme:'#9D174D',bg:'#FFF5F7',card:'#FFFFFF',ph:'#FCE7F3', font:'Josefin Sans, sans-serif',      iconColor:'#9D174D'},
-  {id:'sunset',     name:'Sunset',       desc:'Bold editorial — expressive impact',          theme:'#C2410C',bg:'#FFF8F4',card:'#FFFFFF',ph:'#FFEDD5', font:'Syne, sans-serif',              iconColor:'#C2410C'},
-  {id:'royal',      name:'Royal',        desc:'Dark serif luxury — premium presence',        theme:'#5B21B6',bg:'#F5F3FF',card:'#FFFFFF',ph:'#EDE9FE', font:'Playfair Display, serif',       iconColor:'#5B21B6'},
-  {id:'emerald',    name:'Emerald',      desc:'Friendly & fresh — bold rounded energy',      theme:'#047857',bg:'#ECFDF5',card:'#FFFFFF',ph:'#D1FAE5', font:'Urbanist, sans-serif',          iconColor:'#047857'},
-  {id:'slate',      name:'Slate',        desc:'Corporate minimal — clean & efficient',       theme:'#334155',bg:'#F8FAFC',card:'#FFFFFF',ph:'#E2E8F0', font:'DM Sans, sans-serif',           iconColor:'#334155'},
-  {id:'marigold',   name:'Marigold',     desc:'Market artisan — warm bold character',        theme:'#A16207',bg:'#FEFCE8',card:'#FFFFFF',ph:'#FEF08A', font:'Syne, sans-serif',              iconColor:'#A16207'},
-  {id:'berry',      name:'Berry',        desc:'Gradient hero — vivid modern punch',          theme:'#7C2D8A',bg:'#FDF4FF',card:'#FFFFFF',ph:'#F3E8FF', font:'Urbanist, sans-serif',          iconColor:'#7C2D8A'},
-  {id:'coral',      name:'Coral',        desc:'Vibrant lifestyle — energetic & fun',         theme:'#E03E5E',bg:'#FFF5F6',card:'#FFFFFF',ph:'#FFE4E6', font:'Syne, sans-serif',              iconColor:'#E03E5E'},
-  {id:'sage',       name:'Sage',         desc:'Wellness & nature — calm dashed softness',    theme:'#4D7C5F',bg:'#F4F8F5',card:'#FFFFFF',ph:'#E0EDEA', font:'Raleway, sans-serif',           iconColor:'#4D7C5F'},
-  {id:'denim',      name:'Denim',        desc:'Casual everyday — reliable & friendly',       theme:'#1D4ED8',bg:'#F5F8FF',card:'#FFFFFF',ph:'#E0E7FF', font:'Urbanist, sans-serif',          iconColor:'#1D4ED8'},
-  {id:'copper',     name:'Copper',       desc:'Artisan craft — uppercase structured pride',  theme:'#9A3412',bg:'#FFF8F5',card:'#FFFFFF',ph:'#FDDDD0', font:'Josefin Sans, sans-serif',      iconColor:'#9A3412'},
+  {id:'classic',    name:'Classic',      desc:'Warm serif luxury — timeless elegance',     layout:'boutique',       theme:'#B45309',bg:'#F9F7F4',card:'#FFFFFF',ph:'#FEF3C7', font:'Playfair Display, serif',       iconColor:'#B45309'},
+  {id:'forest',     name:'Forest',       desc:'Organic rounded — fresh & natural',          layout:'fresh',           theme:'#166534',bg:'#F0F7F1',card:'#FFFFFF',ph:'#DCFCE7', font:'Urbanist, sans-serif',          iconColor:'#166534'},
+  {id:'ocean',      name:'Ocean',        desc:'Scandinavian clean — trust & clarity',       layout:'minimal',        theme:'#1E40AF',bg:'#EFF6FF',card:'#FFFFFF',ph:'#DBEAFE', font:'DM Sans, sans-serif',           iconColor:'#1E40AF'},
+  {id:'rose',       name:'Rose',         desc:'Fashion editorial — couture & style',        layout:'luxury',         theme:'#9D174D',bg:'#FFF5F7',card:'#FFFFFF',ph:'#FCE7F3', font:'Josefin Sans, sans-serif',      iconColor:'#9D174D'},
+  {id:'sunset',     name:'Sunset',       desc:'Bold editorial — expressive impact',         layout:'drop',          theme:'#C2410C',bg:'#FFF8F4',card:'#FFFFFF',ph:'#FFEDD5', font:'Syne, sans-serif',              iconColor:'#C2410C'},
+  {id:'royal',      name:'Royal',        desc:'Dark serif luxury — premium presence',       layout:'luxury',        theme:'#5B21B6',bg:'#F5F3FF',card:'#FFFFFF',ph:'#EDE9FE', font:'Playfair Display, serif',       iconColor:'#5B21B6'},
+  {id:'emerald',    name:'Emerald',      desc:'Friendly & fresh — bold rounded energy',    layout:'fresh',      theme:'#047857',bg:'#ECFDF5',card:'#FFFFFF',ph:'#D1FAE5', font:'Urbanist, sans-serif',          iconColor:'#047857'},
+  {id:'slate',      name:'Slate',        desc:'Corporate minimal — clean & efficient',      layout:'minimal',       theme:'#334155',bg:'#F8FAFC',card:'#FFFFFF',ph:'#E2E8F0', font:'DM Sans, sans-serif',           iconColor:'#334155'},
+  {id:'marigold',   name:'Marigold',     desc:'Market artisan — warm bold character',       layout:'market',        theme:'#A16207',bg:'#FEFCE8',card:'#FFFFFF',ph:'#FEF08A', font:'Syne, sans-serif',              iconColor:'#A16207'},
+  {id:'berry',      name:'Berry',        desc:'Gradient hero — vivid modern punch',        layout:'haul',          theme:'#7C2D8A',bg:'#FDF4FF',card:'#FFFFFF',ph:'#F3E8FF', font:'Urbanist, sans-serif',          iconColor:'#7C2D8A'},
+  {id:'coral',      name:'Coral',        desc:'Vibrant lifestyle — energetic & fun',       layout:'market',         theme:'#E03E5E',bg:'#FFF5F6',card:'#FFFFFF',ph:'#FFE4E6', font:'Syne, sans-serif',              iconColor:'#E03E5E'},
+  {id:'sage',       name:'Sage',         desc:'Wellness & nature — calm dashed softness',  layout:'boutique',    theme:'#4D7C5F',bg:'#F4F8F5',card:'#FFFFFF',ph:'#E0EDEA', font:'Raleway, sans-serif',           iconColor:'#4D7C5F'},
+  {id:'denim',      name:'Denim',        desc:'Casual everyday — reliable & friendly',     layout:'classifieds',       theme:'#1D4ED8',bg:'#F5F8FF',card:'#FFFFFF',ph:'#E0E7FF', font:'Urbanist, sans-serif',          iconColor:'#1D4ED8'},
+  {id:'copper',     name:'Copper',       desc:'Artisan craft — uppercase structured pride', layout:'drop',  theme:'#9A3412',bg:'#FFF8F5',card:'#FFFFFF',ph:'#FDDDD0', font:'Josefin Sans, sans-serif',      iconColor:'#9A3412'},
   // ── Dark themes ──────────────────────────────────────────
-  {id:'midnight',   name:'Midnight',     desc:'Gold serif on deep night — bold luxury',      theme:'#F59E0B',bg:'#0D0F1A',card:'#161824',ph:'#1E2235', font:'Playfair Display, serif',       iconColor:'#F59E0B'},
-  {id:'carbon',     name:'Carbon',       desc:'Monospace cyber — industrial terminal grit',  theme:'#22D3EE',bg:'#0F1117',card:'#181B24',ph:'#1A1F2E', font:'IBM Plex Mono, monospace',      iconColor:'#22D3EE'},
-  {id:'obsidian',   name:'Obsidian',     desc:'Violet glow on pure black — ultra dark',      theme:'#A78BFA',bg:'#09090B',card:'#111114',ph:'#1A1524', font:'Syne, sans-serif',              iconColor:'#A78BFA'},
-  {id:'noir',       name:'Noir',         desc:'Ember red on dark — theatrical & cinematic',  theme:'#F87171',bg:'#111215',card:'#1A1C21',ph:'#1F1618', font:'Josefin Sans, sans-serif',      iconColor:'#F87171'},
-  {id:'deep-ocean', name:'Deep Ocean',   desc:'Teal mono on dark navy — depth & precision',  theme:'#2DD4BF',bg:'#0C1220',card:'#121A2C',ph:'#0E1A28', font:'Space Mono, monospace',         iconColor:'#2DD4BF'},
-  {id:'pitch',      name:'Pitch',        desc:'Lime on near-black — street hype culture',    theme:'#84CC16',bg:'#0A0B0D',card:'#121316',ph:'#101408', font:'Syne, sans-serif',              iconColor:'#84CC16'},
+  {id:'midnight',   name:'Midnight',     desc:'Gold serif on deep night — bold luxury',    layout:'luxury',      theme:'#F59E0B',bg:'#0D0F1A',card:'#161824',ph:'#1E2235', font:'Playfair Display, serif',       iconColor:'#F59E0B'},
+  {id:'carbon',     name:'Carbon',       desc:'Monospace cyber — industrial terminal grit', layout:'tech',  theme:'#22D3EE',bg:'#0F1117',card:'#181B24',ph:'#1A1F2E', font:'IBM Plex Mono, monospace',      iconColor:'#22D3EE'},
+  {id:'obsidian',   name:'Obsidian',     desc:'Violet glow on pure black — ultra dark',    layout:'mega',      theme:'#A78BFA',bg:'#09090B',card:'#111114',ph:'#1A1524', font:'Syne, sans-serif',              iconColor:'#A78BFA'},
+  {id:'noir',       name:'Noir',         desc:'Ember red on dark — theatrical & cinematic', layout:'drop',  theme:'#F87171',bg:'#111215',card:'#1A1C21',ph:'#1F1618', font:'Josefin Sans, sans-serif',      iconColor:'#F87171'},
+  {id:'deep-ocean', name:'Deep Ocean',   desc:'Teal mono on dark navy — depth & precision', layout:'tech',  theme:'#2DD4BF',bg:'#0C1220',card:'#121A2C',ph:'#0E1A28', font:'Space Mono, monospace',         iconColor:'#2DD4BF'},
+  {id:'pitch',      name:'Pitch',        desc:'Lime on near-black — street hype culture',  layout:'haul',    theme:'#84CC16',bg:'#0A0B0D',card:'#121316',ph:'#101408', font:'Syne, sans-serif',              iconColor:'#84CC16'},
 ];
 
 // ══════════════════════════════════════════════════════════
@@ -874,9 +1153,12 @@ async function init() {
     Object.assign(S.settings, settings);
     S.products = Array.isArray(products) ? products : [];
     // Restore iconColor from preset if missing
-    if(S.settings._themeId && !S.settings._iconColor){
+    if(S.settings._themeId){
       const pp=PRESETS.find(x=>x.id===S.settings._themeId);
-      if(pp) S.settings._iconColor=pp.iconColor;
+      if(pp){
+        if(!S.settings._iconColor) S.settings._iconColor=pp.iconColor;
+        if(!S.settings._layout) S.settings._layout=pp.layout;
+      }
     }
   } catch(e) { console.error('load error', e); }
 
@@ -950,10 +1232,10 @@ function applyFullTheme(s) {
   rt.style.setProperty('--border',  bgDark?'#FFFFFF09':'#00000010');
   rt.style.setProperty('--border2', bgDark?'#FFFFFF16':'#00000018');
 
-  // Text — auto from bg brightness
-  rt.style.setProperty('--text',  bgDark?'#F0F2FF':'#191B2A');
-  rt.style.setProperty('--sub',   bgDark?'#9498AD':'#52566B');
-  rt.style.setProperty('--muted', bgDark?'#6B7080':'#9498AD');
+  // Text — auto from bg brightness, overrideable by custom font colours
+  rt.style.setProperty('--text',  s.text_color  && s.text_color.length===7  ? s.text_color  : (bgDark?'#F0F2FF':'#191B2A'));
+  rt.style.setProperty('--sub',   s.sub_color   && s.sub_color.length===7   ? s.sub_color   : (bgDark?'#9498AD':'#52566B'));
+  rt.style.setProperty('--muted', s.muted_color && s.muted_color.length===7 ? s.muted_color : (bgDark?'#6B7080':'#9498AD'));
 
   // Placeholder bg
   rt.style.setProperty('--ph-bg', ph);
@@ -970,6 +1252,12 @@ function applyFullTheme(s) {
   const htmlEl = document.documentElement;
   allThemeClasses.forEach(c=>htmlEl.classList.remove('theme-'+c));
   if(s._themeId) htmlEl.classList.add('theme-'+s._themeId);
+
+  // Layout on <body> — drives structural UI
+  const allLayouts = ['market','mega','classifieds','haul','boutique','drop','minimal','tech','luxury','fresh'];
+  allLayouts.forEach(l=>document.body.removeAttribute('data-layout'));
+  if(s._layout) document.body.setAttribute('data-layout', s._layout);
+  else document.body.removeAttribute('data-layout');
 
   // Icon / svg color CSS variable
   rt.style.setProperty('--icon-color', s._iconColor||theme);
@@ -1078,7 +1366,43 @@ function rStore() {
     const ms=!S.search||[p.name,p.description,p.tags||''].join(' ').toLowerCase().includes(S.search.toLowerCase());
     return mc&&ms;
   });
+  const layout = S.settings._layout || '';
   const grid=document.getElementById('pgrid');
+
+  // Layout-specific pre-grid banners
+  const preGrid = document.getElementById('pre-grid');
+  if(preGrid){
+    const discounted = fl.filter(x=>(x.discount||0)>0).length;
+    if(layout==='market'){
+      preGrid.innerHTML = discounted>0
+        ? `<div class="market-deals-banner"><span class="market-deals-badge">🔥 HOT</span> ${discounted} deal${discounted!==1?'s':''} available today — limited stock!</div>`
+        : '';
+    } else if(layout==='haul'){
+      preGrid.innerHTML = discounted>0
+        ? `<div class="haul-flash"><div><div>${discounted} Flash Deals Active</div><div class="haul-flash-count">Prices drop when stock runs low</div></div><span class="haul-flash-badge">SALE</span></div>`
+        : '';
+    } else if(layout==='fresh'){
+      preGrid.innerHTML = `<div class="fresh-delivery"><span class="fresh-delivery-dot"></span>Express delivery available on all items</div>
+      <div class="fresh-cats">
+        ${['All',...new Set(S.products.map(p=>p.category))].map(c=>`<div class="fresh-cat-chip${S.cat===c?' on':''}" onclick="doCat('${c}')">${c}</div>`).join('')}
+      </div>`;
+    } else if(layout==='mega'){
+      preGrid.innerHTML = `<div class="mega-trust">
+        <div class="mega-trust-item"><div class="mega-trust-dot">✓</div>Free Returns</div>
+        <div class="mega-trust-item"><div class="mega-trust-dot">★</div>Top Rated</div>
+        <div class="mega-trust-item"><div class="mega-trust-dot">⚡</div>Fast Delivery</div>
+        <div class="mega-trust-item"><div class="mega-trust-dot">🔒</div>Secure Checkout</div>
+      </div>`;
+    } else if(layout==='boutique'){
+      preGrid.innerHTML = `<div class="boutique-story">Every item is carefully curated — made with intention, designed to last. Discover pieces that tell a story.</div>`;
+    } else if(layout==='drop'){
+      const cnt = fl.length;
+      preGrid.innerHTML = `<div class="drop-divider"></div><div class="drop-count">${cnt} ITEM${cnt!==1?'S':''} AVAILABLE</div>`;
+    } else {
+      preGrid.innerHTML = '';
+    }
+  }
+
   if(!fl.length){
     grid.innerHTML=`<div class="card empty" style="grid-column:1/-1"><div class="empty-box"><div class="empty-box-in"></div></div><h3>${S.products.length===0?'No products yet':'No results found'}</h3><p>${S.products.length===0?'Products added by admin will appear here.':'Try a different search or filter.'}</p></div>`;
     return;
@@ -1087,6 +1411,10 @@ function rStore() {
   const viewText=s.btn_view_text||'View';
   grid.innerHTML=fl.map((p,i)=>{
     const d=p.discount||0,fp=dp(p.price,d);
+    // Layout-specific extras inside card
+    const techSpec = layout==='tech' ? `<div class="tech-spec-row">SKU: ${p.id.slice(-6).toUpperCase()} | Stock: ${p.stock} | Cat: ${p.category}</div>` : '';
+    const megaStars = layout==='mega' ? `<div class="star-row"><span class="stars">★★★★☆</span><span class="star-count">(${Math.floor(Math.random()*200)+12})</span></div>` : '';
+    const locTag = layout==='classifieds' ? `<div class="classifieds-loc">${p.category}</div>` : '';
     return`<div class="pcard${p.featured?' feat':''} fadeUp" style="animation-delay:${i*.04}s">
     <div class="pcard-media">${pMedia(p)}
       <div class="badges-r">${p.featured?'<span class="tag t-g">Featured</span>':''}<span class="tag t-p">${p.category}</span></div>
@@ -1094,9 +1422,11 @@ function rStore() {
       ${d>0?`<div class="disc-bar">${d}% OFF</div>`:''}
     </div>
     <div class="pcard-body">
+      ${locTag}${megaStars}
       <div class="pcard-tags">${rTags(p.tags)}</div>
       <div class="pcard-name">${p.name}</div>
       <div class="pcard-desc">${p.description}</div>
+      ${techSpec}
       <div class="price-row">
         <div class="p-price">${fmt(fp)}</div>
         ${d>0?`<div class="p-orig">${fmt(p.price)}</div><div class="p-disc">-${d}%</div>`:''}
@@ -1304,7 +1634,7 @@ function rTabA(){
       <div class="preset-body">
         <div class="preset-name" style="color:${p.theme};font-family:${p.font}">${p.name}</div>
         <div class="preset-desc">${p.desc}</div>
-        <div style="font-size:10px;color:var(--muted);margin-bottom:6px;font-style:italic">${p.font.split(',')[0]}</div>
+        <div style="font-size:10px;color:var(--muted);margin-bottom:6px;font-style:italic">${p.font.split(',')[0]} · ${p.layout||'default'}</div>
         <div class="preset-btns">
           <button class="btn-preview" onclick="previewPreset('${p.id}')">Preview</button>
           <button class="btn-apply" style="background:${p.theme}" onclick="applyPreset('${p.id}')">Apply</button>
@@ -1363,6 +1693,31 @@ function rTabA(){
         <input type="text" id="a-ph-hex" value="${s.placeholder_bg||'#E8F5E9'}" oninput="liveColorHex('placeholder_bg',this.value)" placeholder="#E8F5E9"/>
       </div>
     </div>
+    <div class="fl">
+      <label>Primary Text Colour <span class="hint">headings, product names, prices</span></label>
+      <div class="cpicker-row">
+        <input type="color" id="a-text" value="${s.text_color||''}" oninput="liveColor('text_color',this.value)"/>
+        <input type="text" id="a-text-hex" value="${s.text_color||''}" oninput="liveColorHex('text_color',this.value)" placeholder="auto from background"/>
+      </div>
+    </div>
+    <div class="fl">
+      <label>Secondary Text Colour <span class="hint">nav links, labels, subtitles</span></label>
+      <div class="cpicker-row">
+        <input type="color" id="a-sub" value="${s.sub_color||''}" oninput="liveColor('sub_color',this.value)"/>
+        <input type="text" id="a-sub-hex" value="${s.sub_color||''}" oninput="liveColorHex('sub_color',this.value)" placeholder="auto from background"/>
+      </div>
+    </div>
+    <div class="fl">
+      <label>Muted Text Colour <span class="hint">descriptions, stock, timestamps</span></label>
+      <div class="cpicker-row">
+        <input type="color" id="a-muted" value="${s.muted_color||''}" oninput="liveColor('muted_color',this.value)"/>
+        <input type="text" id="a-muted-hex" value="${s.muted_color||''}" oninput="liveColorHex('muted_color',this.value)" placeholder="auto from background"/>
+      </div>
+    </div>
+  </div>
+  <div style="font-size:11px;color:var(--muted);margin-bottom:16px;margin-top:-4px">
+    💡 Leave font colour fields empty to auto-calculate from your background colour.
+    <button style="background:none;border:none;color:var(--t);font-size:11px;font-weight:600;cursor:pointer;padding:0;margin-left:6px" onclick="resetFontColors()">Reset to auto</button>
   </div>
 
   <!-- Text Labels -->
@@ -1388,7 +1743,7 @@ function rTabA(){
 function previewPreset(id){
   S.previewPreset=id;
   const p=PRESETS.find(x=>x.id===id);if(!p)return;
-  applyFullTheme({...S.settings,theme:p.theme,bg_color:p.bg,card_color:p.card,placeholder_bg:p.ph,_themeId:p.id,_iconColor:p.iconColor});
+  applyFullTheme({...S.settings,theme:p.theme,bg_color:p.bg,card_color:p.card,placeholder_bg:p.ph,_themeId:p.id,_iconColor:p.iconColor,_layout:p.layout});
   syncPickers({theme:p.theme,bg_color:p.bg,card_color:p.card,placeholder_bg:p.ph});
   document.querySelectorAll('.preset-card').forEach(el=>el.classList.remove('active-preset'));
   document.getElementById('pc-'+id)?.classList.add('active-preset');
@@ -1397,7 +1752,9 @@ function previewPreset(id){
 function applyPreset(id){
   const p=PRESETS.find(x=>x.id===id);if(!p)return;
   S.settings.theme=p.theme;S.settings.bg_color=p.bg;S.settings.card_color=p.card;S.settings.placeholder_bg=p.ph;
-  S.settings._themeId=p.id;S.settings._iconColor=p.iconColor;
+  S.settings._themeId=p.id;S.settings._iconColor=p.iconColor;S.settings._layout=p.layout;
+  // Clear custom font colours so preset auto-colours take effect
+  S.settings.text_color='';S.settings.sub_color='';S.settings.muted_color='';
   S.previewPreset=id;
   applyFullTheme(S.settings);
   syncPickers(S.settings);
@@ -1409,29 +1766,49 @@ function resetPreview(){
     'slate','marigold','berry','coral','sage','denim','copper',
     'midnight','carbon','obsidian','noir','deep-ocean','pitch'];
   allThemeClasses.forEach(c=>document.documentElement.classList.remove('theme-'+c));
+  document.body.removeAttribute('data-layout');
   applyFullTheme(S.settings);syncPickers(S.settings);
   document.querySelectorAll('.preset-card').forEach(el=>el.classList.remove('active-preset'));
   toast('Preview reset','info');
 }
 
 function syncPickers(s){
-  const pairs=[['a-theme','a-theme-hex','theme'],['a-bg','a-bg-hex','bg_color'],['a-card','a-card-hex','card_color'],['a-ph','a-ph-hex','placeholder_bg']];
+  const pairs=[
+    ['a-theme','a-theme-hex','theme'],
+    ['a-bg','a-bg-hex','bg_color'],
+    ['a-card','a-card-hex','card_color'],
+    ['a-ph','a-ph-hex','placeholder_bg'],
+    ['a-text','a-text-hex','text_color'],
+    ['a-sub','a-sub-hex','sub_color'],
+    ['a-muted','a-muted-hex','muted_color'],
+  ];
   pairs.forEach(([cp,hx,key])=>{const v=s[key]||'';if(document.getElementById(cp))document.getElementById(cp).value=v;if(document.getElementById(hx))document.getElementById(hx).value=v;});
 }
 
 function liveColor(key,val){
   if(!/^#[0-9A-Fa-f]{6}$/.test(val))return;
   S.settings[key]=val;
-  const hexId={'theme':'a-theme-hex','bg_color':'a-bg-hex','card_color':'a-card-hex','placeholder_bg':'a-ph-hex'}[key];
+  const hexId={'theme':'a-theme-hex','bg_color':'a-bg-hex','card_color':'a-card-hex','placeholder_bg':'a-ph-hex','text_color':'a-text-hex','sub_color':'a-sub-hex','muted_color':'a-muted-hex'}[key];
   if(hexId&&document.getElementById(hexId))document.getElementById(hexId).value=val;
   applyFullTheme(S.settings);
 }
 function liveColorHex(key,val){
   if(!/^#[0-9A-Fa-f]{6}$/.test(val))return;
   S.settings[key]=val;
-  const pickerId={'theme':'a-theme','bg_color':'a-bg','card_color':'a-card','placeholder_bg':'a-ph'}[key];
+  const pickerId={'theme':'a-theme','bg_color':'a-bg','card_color':'a-card','placeholder_bg':'a-ph','text_color':'a-text','sub_color':'a-sub','muted_color':'a-muted'}[key];
   if(pickerId&&document.getElementById(pickerId))document.getElementById(pickerId).value=val;
   applyFullTheme(S.settings);
+}
+
+function resetFontColors(){
+  ['text_color','sub_color','muted_color'].forEach(k=>{
+    S.settings[k]='';
+  });
+  ['a-text','a-text-hex','a-sub','a-sub-hex','a-muted','a-muted-hex'].forEach(id=>{
+    const el=document.getElementById(id);if(el)el.value='';
+  });
+  applyFullTheme(S.settings);
+  toast('Font colours reset to auto','info');
 }
 
 function toggleSection(key,checked){
@@ -1451,7 +1828,7 @@ async function saveAppearance(){
   // Persist theme id and icon color so they survive page reload
   if(S.previewPreset){
     const pp=PRESETS.find(x=>x.id===S.previewPreset);
-    if(pp){S.settings._themeId=pp.id;S.settings._iconColor=pp.iconColor;}
+    if(pp){S.settings._themeId=pp.id;S.settings._iconColor=pp.iconColor;S.settings._layout=pp.layout;}
   }
   const payload={...S.settings};
   const r=await api('POST','/settings',payload);
