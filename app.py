@@ -127,7 +127,7 @@ def initialize_db():
             "featured": "ALTER TABLE product ADD COLUMN featured BOOLEAN DEFAULT 0",
             "discount": "ALTER TABLE product ADD COLUMN discount FLOAT DEFAULT 0",
             "photo":    "ALTER TABLE product ADD COLUMN photo TEXT DEFAULT ''",
-        "photos":   "ALTER TABLE product ADD COLUMN photos TEXT DEFAULT '[]'",
+            "photos":   "ALTER TABLE product ADD COLUMN photos TEXT DEFAULT '[]'",
         }
         for col, sql in migrations.items():
             if col not in existing:
@@ -248,10 +248,18 @@ def api_add_product():
     d = request.json or {}
     if not d.get("name") or not d.get("price"):
         return jsonify({"error": "name and price required"}), 400
+
+    # ── FIX: handle photos on creation ───────────────────────────────────────
+    photos_list = d.get("photos", [])
+    if not isinstance(photos_list, list):
+        photos_list = []
+
     p = Product(
         name=d["name"], category=d.get("category", "General"),
         price=float(d["price"]), description=d.get("description", ""),
-        image=d.get("image", ""), photo=d.get("photo", ""),
+        image=d.get("image", ""),
+        photo=photos_list[0] if photos_list else d.get("photo", ""),
+        photos=json.dumps(photos_list),
         stock=int(d.get("stock", 0)), tags=d.get("tags", ""),
         featured=bool(d.get("featured", False)),
         discount=float(d.get("discount", 0)),
