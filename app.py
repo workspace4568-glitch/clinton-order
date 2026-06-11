@@ -20,6 +20,7 @@ if raw_url.startswith("postgres://"):
 
 app.config["SQLALCHEMY_DATABASE_URI"] = raw_url
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["MAX_CONTENT_LENGTH"] = 20 * 1024 * 1024  # 20MB max upload
 
 # Fix SQLite concurrent access (crashes with multiple workers)
 if raw_url.startswith("sqlite"):
