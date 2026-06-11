@@ -4,20 +4,20 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app --workers 1 --threads 4 --bind 0.0.0.0:$PORT --timeout 120
+    startCommand: gunicorn app:app --workers 1 --threads 2 --bind 0.0.0.0:$PORT --timeout 120
     healthCheckPath: /health
-    disk:
-      name: nexarion-data
-      mountPath: /data
-      sizeGB: 1
     envVars:
       - key: SECRET_KEY
         generateValue: true
       - key: ADMIN_PASSWORD
         value: nexarion2024
       - key: DATABASE_URL
-        value: sqlite:////data/nexarion.db
+        fromDatabase:
+          name: nexarion-db
+          property: connectionString
       - key: RENDER
         value: "true"
-      - key: FLASK_DEBUG
-        value: "0"
+
+  - type: postgres
+    name: nexarion-db
+    plan: free
